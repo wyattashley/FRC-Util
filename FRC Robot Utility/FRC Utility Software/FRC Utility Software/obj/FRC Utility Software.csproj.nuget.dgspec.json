@@ -44,6 +44,10 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "DotNetProjects.WpfToolkit.DataVisualization": {
+              "target": "Package",
+              "version": "[6.1.91, )"
+            },
             "SSH.NET": {
               "target": "Package",
               "version": "[2020.0.1, )"

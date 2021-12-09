@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "DotNetProjects.WpfToolkit.DataVisualization/6.1.91": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "SSH.NET/2020.0.1": {
         "type": "package",
         "dependencies": {
@@ -26,6 +38,20 @@
     }
   },
   "libraries": {
+    "DotNetProjects.WpfToolkit.DataVisualization/6.1.91": {
+      "sha512": "5l825lkzYQe5njHZPrc7XHrCBX/m6dmGwPxsMUzGh0flXFaZdYctAa6v6JySr8JbDjxwfKb1dy6IOlokz5hT3Q==",
+      "type": "package",
+      "path": "dotnetprojects.wpftoolkit.datavisualization/6.1.91",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetprojects.wpftoolkit.datavisualization.6.1.91.nupkg.sha512",
+        "dotnetprojects.wpftoolkit.datavisualization.nuspec",
+        "lib/net40/DotNetProjects.DataVisualization.Toolkit.dll",
+        "lib/net5.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll",
+        "lib/net6.0-windows7.0/DotNetProjects.DataVisualization.Toolkit.dll"
+      ]
+    },
     "SSH.NET/2020.0.1": {
       "sha512": "DhVeQ8JzoS8Z25VwZfQ/9HEjTO8eWs4ldsMkcMsUFK7TFc8GnpxBeRBj3X8mc5+rwvzZNNmLDm08a8TpPZNF/g==",
       "type": "package",
@@ -93,6 +119,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "DotNetProjects.WpfToolkit.DataVisualization >= 6.1.91",
       "SSH.NET >= 2020.0.1"
     ]
   },
@@ -140,6 +167,10 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
+          "DotNetProjects.WpfToolkit.DataVisualization": {
+            "target": "Package",
+            "version": "[6.1.91, )"
+          },
           "SSH.NET": {
             "target": "Package",
             "version": "[2020.0.1, )"

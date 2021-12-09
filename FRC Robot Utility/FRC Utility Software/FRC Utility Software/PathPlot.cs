@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization;
 
 namespace FRC_Utility_Software
 {

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "490yzobv/qJCEUIOYgadWFj+TA6Udp6B4bOmIb42hRVnINbSPAGbbHHEwUs9HpSK9dowL6V6JyGNltjJ039bAg==",
+  "dgSpecHash": "R+Whg2fX7qJVJ1KbxUJJ+kOVxXceys1kW24g61IaRGErFTiVOi1nUnNiVw36MiaIb3C+U8YMEDZxiCUuF9Y4bA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Wyatt\\.nuget\\packages\\dotnetprojects.wpftoolkit.datavisualization\\6.1.91\\dotnetprojects.wpftoolkit.datavisualization.6.1.91.nupkg.sha512",
     "C:\\Users\\Wyatt\\.nuget\\packages\\ssh.net\\2020.0.1\\ssh.net.2020.0.1.nupkg.sha512",
     "C:\\Users\\Wyatt\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512"
   ],
