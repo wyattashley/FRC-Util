@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wyatt\\source\\repos\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj": {}
+    "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wyatt\\source\\repos\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj": {
+    "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wyatt\\source\\repos\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj",
+        "projectUniqueName": "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj",
         "projectName": "FRC Utility Software",
-        "projectPath": "C:\\Users\\Wyatt\\source\\repos\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj",
+        "projectPath": "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj",
         "packagesPath": "C:\\Users\\Wyatt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wyatt\\source\\repos\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\obj\\",
+        "outputPath": "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
