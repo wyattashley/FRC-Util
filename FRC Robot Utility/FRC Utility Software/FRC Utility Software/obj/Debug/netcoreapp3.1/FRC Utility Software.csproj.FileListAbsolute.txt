@@ -20,3 +20,25 @@ C:\Users\Wyatt\source\repos\FRC Robot Utility\FRC Utility Software\FRC Utility S
 C:\Users\Wyatt\source\repos\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.PathCreator.resources
 C:\Users\Wyatt\source\repos\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.Properties.Resources.resources
 C:\Users\Wyatt\source\repos\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.PathPlot.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.csproj.AssemblyReference.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.MainProject.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.OpenNetPrompt.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.PathCreator.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.PathPlot.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC_Utility_Software.Properties.Resources.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.csproj.GenerateResource.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.AssemblyInfoInputs.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.AssemblyInfo.cs
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.csproj.CoreCompileInputs.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.pdb
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\FRC Utility Software.exe
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\FRC Utility Software.deps.json
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\FRC Utility Software.runtimeconfig.json
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\FRC Utility Software.runtimeconfig.dev.json
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\FRC Utility Software.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\FRC Utility Software.pdb
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\netcoreapp3.1\FRC Utility Software.genruntimeconfig.cache

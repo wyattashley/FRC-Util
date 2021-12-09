@@ -1,0 +1,25 @@
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\FRC Utility Software.exe
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\FRC Utility Software.deps.json
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\FRC Utility Software.runtimeconfig.json
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\FRC Utility Software.runtimeconfig.dev.json
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\FRC Utility Software.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\ref\FRC Utility Software.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\FRC Utility Software.pdb
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\Renci.SshNet.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\SshNet.Security.Cryptography.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.csproj.AssemblyReference.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.MainProject.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.OpenNetPrompt.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.PathCreator.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.PathPlot.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.Properties.Resources.resources
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.csproj.GenerateResource.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.AssemblyInfoInputs.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.AssemblyInfo.cs
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.csproj.CoreCompileInputs.cache
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.csproj.CopyComplete
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\ref\FRC Utility Software.dll
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.pdb
+C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC Utility Software.genruntimeconfig.cache
