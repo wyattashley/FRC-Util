@@ -123,14 +123,14 @@ namespace FRC_Utility_Software
             int lineIndex = 0;
             foreach (string line in logTextboxView.Text.Split("\n"))
             {
-                logTextboxView.Select(logTextboxView.GetFirstCharIndexFromLine(lineIndex), line.Length);
-
                 lineIndex++;
 
                 if (!Regex.Match(line, standardFormatedLineRegex).Success)
                 {
                     continue;
                 }
+
+                logTextboxView.Select(logTextboxView.GetFirstCharIndexFromLine(lineIndex), line.Length);
 
                 char id = line[16];
                 switch (id)
