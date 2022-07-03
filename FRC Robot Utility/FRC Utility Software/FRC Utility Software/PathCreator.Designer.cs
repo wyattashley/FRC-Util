@@ -52,6 +52,7 @@ namespace FRC_Utility_Software
             this.saveLocalDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.removeStepNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flipStepNumeric1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flipStepNumeric2)).BeginInit();
@@ -224,7 +225,7 @@ namespace FRC_Utility_Software
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("SF Sports Night NS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.button1.Location = new System.Drawing.Point(550, 180);
+            this.button1.Location = new System.Drawing.Point(550, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 38);
             this.button1.TabIndex = 34;
@@ -238,7 +239,7 @@ namespace FRC_Utility_Software
             this.rotateStepNumeric.DecimalPlaces = 1;
             this.rotateStepNumeric.Font = new System.Drawing.Font("SF Sports Night NS", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rotateStepNumeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.rotateStepNumeric.Location = new System.Drawing.Point(715, 181);
+            this.rotateStepNumeric.Location = new System.Drawing.Point(715, 151);
             this.rotateStepNumeric.Maximum = new decimal(new int[] {
             360,
             0,
@@ -262,6 +263,7 @@ namespace FRC_Utility_Software
             this.red1.TabStop = true;
             this.red1.Text = "Red 1";
             this.red1.UseVisualStyleBackColor = true;
+            this.red1.CheckedChanged += new System.EventHandler(this.onPositionChange);
             // 
             // groupBox1
             // 
@@ -292,6 +294,7 @@ namespace FRC_Utility_Software
             this.blue2.TabStop = true;
             this.blue2.Text = "Blue 2";
             this.blue2.UseVisualStyleBackColor = true;
+            this.blue2.CheckedChanged += new System.EventHandler(this.onPositionChange);
             // 
             // blue3
             // 
@@ -305,6 +308,7 @@ namespace FRC_Utility_Software
             this.blue3.TabStop = true;
             this.blue3.Text = "Blue 3";
             this.blue3.UseVisualStyleBackColor = true;
+            this.blue3.CheckedChanged += new System.EventHandler(this.onPositionChange);
             // 
             // blue1
             // 
@@ -318,6 +322,7 @@ namespace FRC_Utility_Software
             this.blue1.TabStop = true;
             this.blue1.Text = "Blue 1";
             this.blue1.UseVisualStyleBackColor = true;
+            this.blue1.CheckedChanged += new System.EventHandler(this.onPositionChange);
             // 
             // red3
             // 
@@ -331,6 +336,7 @@ namespace FRC_Utility_Software
             this.red3.TabStop = true;
             this.red3.Text = "Red 3";
             this.red3.UseVisualStyleBackColor = true;
+            this.red3.CheckedChanged += new System.EventHandler(this.onPositionChange);
             // 
             // red2
             // 
@@ -344,6 +350,7 @@ namespace FRC_Utility_Software
             this.red2.TabStop = true;
             this.red2.Text = "Red 2";
             this.red2.UseVisualStyleBackColor = true;
+            this.red2.CheckedChanged += new System.EventHandler(this.onPositionChange);
             // 
             // openFileDialog1
             // 
@@ -363,12 +370,27 @@ namespace FRC_Utility_Software
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("SF Sports Night NS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
+            this.button3.Location = new System.Drawing.Point(550, 194);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(184, 38);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "Clear All Steps";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // PathCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1331, 772);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rotateStepNumeric);
@@ -422,5 +444,6 @@ namespace FRC_Utility_Software
         private System.Windows.Forms.SaveFileDialog saveLocalDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

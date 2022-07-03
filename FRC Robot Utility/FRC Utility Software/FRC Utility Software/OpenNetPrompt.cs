@@ -23,6 +23,10 @@ namespace FRC_Utility_Software
             FileLocationEntry.Enabled = false;
             string address = AddressEntry.Text;
             AddressEntry.Enabled = false;
+            string username = UsernameEntity.Text;
+            UsernameEntity.Enabled = false;
+            string password = PasswordEntity.Text;
+            PasswordEntity.Enabled = false;
             int portNumber = (int) PortNumberEntry.Value;
             PortNumberEntry.Enabled = false;
             string logName = LogNameEntry.Text;
@@ -32,7 +36,22 @@ namespace FRC_Utility_Software
             string logType = LogTypeEntry.SelectedIndex.ToString();
             LogTypeEntry.Enabled = false;
 
-            SftpConnection sftp = new SftpConnection("roborio-" + teamNumber + "-frc.local", "lvuser", "");
+            SftpConnection sftp;
+
+
+            sftp = new SftpConnection(address, username, password, StatusDisplay);
+            if(UnkownLocation.Checked)
+            {
+                (new OpenNetBrowsing(sftp)).Show();
+            }
+
+/*            if (!teamNumber.Equals(0))
+            {
+                sftp = new SftpConnection("roborio-" + teamNumber + "-frc.local", "lvuser", "", StatusDisplay);
+            } else
+            {
+                sftp = new SftpConnection(address, username, password, StatusDisplay);
+            }
 
             string stringValue;
 
@@ -50,9 +69,11 @@ namespace FRC_Utility_Software
             else
             {
                 stringValue = sftp.DownloadSftpFile(fileLocation + logName);
-            }
-
-            Program.mainProjectInstance.updateLogText(stringValue);
+            }*/
+            //Program.mainProjectInstance.openFile(stringValue);
+            this.Close();
+            //Program.mainProjectInstance.OpenActionButton_Click(sender, e);
+            //Program.mainProjectInstance.updateLogText(stringValue);
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

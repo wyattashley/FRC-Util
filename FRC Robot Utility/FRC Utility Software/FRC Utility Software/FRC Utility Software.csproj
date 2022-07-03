@@ -10,7 +10,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SSH.NET" Version="2020.0.1" />
+    <None Remove="right-arrow.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="right-arrow.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="4.15.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="ScottPlot.WinForms" Version="4.1.30" />
+    <PackageReference Include="SSH.NET" Version="2020.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
   </ItemGroup>
 
   <ItemGroup>

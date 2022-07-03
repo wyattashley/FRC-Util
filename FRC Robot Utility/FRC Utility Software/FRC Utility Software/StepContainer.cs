@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using static System.Windows.Forms.Control;
 
 namespace FRC_Utility_Software
 {
-    class StepContainer
+    public class StepContainer
     {
+        private int position = -1;
+
+        private StepList parentStepList;
+
         public SplitContainer splitContainer = new SplitContainer();
 
         public Label stepNumberLabel = new Label();
@@ -109,6 +114,7 @@ namespace FRC_Utility_Software
             // parm1Numeric
             // 
             this.parm1Numeric.DecimalPlaces = 2;
+            this.parm1Numeric.Increment = 1;
             this.parm1Numeric.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm1Numeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
             this.parm1Numeric.Location = new System.Drawing.Point(70, 30);
@@ -434,7 +440,6 @@ namespace FRC_Utility_Software
             this.yDistanceNumeric.ThousandsSeparator = true;
 
 
-
             // 
             // splitContainer
             // 
@@ -484,12 +489,83 @@ namespace FRC_Utility_Software
             this.splitContainer.SplitterDistance = 238;
             this.splitContainer.TabIndex = 2;
 
+            this.stepNumberLabel.Text = "Step: " + position;
         }
 
-        public void addToControl(ControlCollection control, int stepNum)
+        public StepContainer copy()
         {
-            this.stepNumberLabel.Text = "Step: " + stepNum;
+            StepContainer stepContainer = new StepContainer();
+
+            stepContainer.actionComboBox.Text = actionComboBox.Text;
+            stepContainer.timeoutNumeric.Value = timeoutNumeric.Value;
+            stepContainer.speedNumeric.Value = speedNumeric.Value;
+            stepContainer.xDistanceNumeric.Value = xDistanceNumeric.Value;
+            stepContainer.yDistanceNumeric.Value = yDistanceNumeric.Value;
+
+            stepContainer.parm1Numeric.Value = parm1Numeric.Value;
+            stepContainer.parm2Numeric.Value = parm2Numeric.Value;
+            stepContainer.parm3Numeric.Value = parm3Numeric.Value;
+            stepContainer.parm4Numeric.Value = parm4Numeric.Value;
+            stepContainer.parm5Numeric.Value = parm5Numeric.Value;
+            stepContainer.parm6Numeric.Value = parm6Numeric.Value;
+            stepContainer.parm7Numeric.Value = parm7Numeric.Value;
+
+            return stepContainer;
+        }
+
+        public void addOnDistanceChange(EventHandler function)
+        {
+
+            this.xDistanceNumeric.ValueChanged += function;
+            this.yDistanceNumeric.ValueChanged += function;
+            this.parm1Numeric.ValueChanged += function;
+        }
+
+        public void addValues(string command, double timeout, double speed, double xdistance, double ydistance, Boolean parallel, double[] parms)
+        {
+            actionComboBox.Text = command;
+            timeoutNumeric.Value = (decimal) timeout;
+            speedNumeric.Value = (decimal) speed;
+            xDistanceNumeric.Value = (decimal) xdistance;
+            yDistanceNumeric.Value = (decimal) ydistance;
+            parrellelCheckBox.Checked = parallel;
+
+            if (0 < parms.Length)
+                parm1Numeric.Value = (decimal) parms[0];
+            if (1 < parms.Length)
+                parm2Numeric.Value = (decimal) parms[1];
+            if (2 < parms.Length)
+                parm3Numeric.Value = (decimal) parms[2];
+            if (3 < parms.Length)
+                parm4Numeric.Value = (decimal) parms[3];
+            if (4 < parms.Length)
+                parm5Numeric.Value = (decimal) parms[4];
+            if (5 < parms.Length)
+                parm6Numeric.Value = (decimal) parms[5];
+            if (6 < parms.Length)
+                parm7Numeric.Value = (decimal) parms[6];
+        }
+
+        public void addToControl(ControlCollection control)
+        {
             control.Add(this.splitContainer);
+        }
+
+
+        public void changePosition(int pos)
+        {
+            position = pos;
+            this.stepNumberLabel.Text = "Step: " + pos;
+        }
+
+        public int getPosition()
+        {
+            return position;
+        }
+
+        public SplitContainer GetContainer()
+        {
+            return this.splitContainer;
         }
 
         public void removeFromControl(ControlCollection control)
@@ -497,24 +573,42 @@ namespace FRC_Utility_Software
             control.Remove(this.splitContainer);
         }
 
-        override
-        public string ToString()
+        //override
+        public string ToXML()
         {
-            return "\t<Step> \n" +
-                "\t\t<command>" + actionComboBox.Text.ToLower() + "</command>\n" +
-                "\t\t<timout>" + timeoutNumeric.Value.ToString() + "</timeout>\n" +
-                "\t\t<speed>" + speedNumeric.Value.ToString() + "</speed>\n" +
-                "\t\t<xdistance>" + xDistanceNumeric.Value.ToString() + "</xdistance>\n" +
-                "\t\t<ydistance>" + yDistanceNumeric.Value.ToString() + "</ydistance>\n" +
-                "\t\t<parallel>" + parrellelCheckBox.Checked.ToString() + "</parallel>\n" +
-                "\t\t<parm1>" + parm1Numeric.Value.ToString() + "</parm1>\n" +
-                "\t\t<parm2>" + parm2Numeric.Value.ToString() + "</parm2>\n" +
-                "\t\t<parm3>" + parm3Numeric.Value.ToString() + "</parm3>\n" +
-                "\t\t<parm4>" + parm4Numeric.Value.ToString() + "</parm4>\n" +
-                "\t\t<parm5>" + parm5Numeric.Value.ToString() + "</parm5>\n" +
-                "\t\t<parm6>" + parm6Numeric.Value.ToString() + "</parm6>\n" +
-                "\t\t<parm7>" + parm7Numeric.Value.ToString() + "</parm7>\n" +
-                "\t</Step>\n";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("\t<Step>");
+            sb.AppendLine("\t\t<command>" + actionComboBox.Text + "</command>");
+            sb.AppendLine("\t\t<timeout>" + timeoutNumeric.Value.ToString() + "</timeout>");
+            sb.AppendLine("\t\t<speed>" + speedNumeric.Value.ToString() + "</speed>");
+            sb.AppendLine("\t\t<xdistance>" + xDistanceNumeric.Value.ToString() + "</xdistance>");
+            sb.AppendLine("\t\t<ydistance>" + yDistanceNumeric.Value.ToString() + "</ydistance>");
+            sb.AppendLine("\t\t<parallel>" + parrellelCheckBox.Checked.ToString() + "</parallel>");
+            sb.AppendLine("\t\t<parm1>" + parm1Numeric.Value.ToString() + "</parm1>");
+            sb.AppendLine("\t\t<parm2>" + parm2Numeric.Value.ToString() + "</parm2>");
+            sb.AppendLine("\t\t<parm3>" + parm3Numeric.Value.ToString() + "</parm3>");
+            sb.AppendLine("\t\t<parm4>" + parm4Numeric.Value.ToString() + "</parm4>");
+            sb.AppendLine("\t\t<parm5>" + parm5Numeric.Value.ToString() + "</parm5>");
+            sb.AppendLine("\t\t<parm6>" + parm6Numeric.Value.ToString() + "</parm6>");
+            sb.AppendLine("\t\t<parm7>" + parm7Numeric.Value.ToString() + "</parm7>");
+            sb.AppendLine("\t</Step>");
+
+            return sb.ToString();
+            //return ("\t<Step> \n" +
+                //"\t\t<command>" + actionComboBox.Text.ToLower() + "</command>\n" +
+                //"\t\t<timout>" + timeoutNumeric.Value.ToString() + "</timeout>\n" +
+                //"\t\t<speed>" + speedNumeric.Value.ToString() + "</speed>\n" +
+                //"\t\t<xdistance>" + xDistanceNumeric.Value.ToString() + "</xdistance>\n" +
+                //"\t\t<ydistance>" + yDistanceNumeric.Value.ToString() + "</ydistance>\n" +
+                //"\t\t<parallel>" + parrellelCheckBox.Checked.ToString() + "</parallel>\n" +
+                //"\t\t<parm1>" + parm1Numeric.Value.ToString() + "</parm1>\n" +
+                //"\t\t<parm2>" + parm2Numeric.Value.ToString() + "</parm2>\n" +
+                //"\t\t<parm3>" + parm3Numeric.Value.ToString() + "</parm3>\n" +
+                //"\t\t<parm4>" + parm4Numeric.Value.ToString() + "</parm4>\n" +
+                //"\t\t<parm5>" + parm5Numeric.Value.ToString() + "</parm5>\n" +
+                //"\t\t<parm6>" + parm6Numeric.Value.ToString() + "</parm6>\n" +
+                //"\t\t<parm7>" + parm7Numeric.Value.ToString() + "</parm7>\n" +
+                //"\t</Step>\n");
         }
     }
 }

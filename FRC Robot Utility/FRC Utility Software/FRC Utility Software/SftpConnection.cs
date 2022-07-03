@@ -4,18 +4,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 
 namespace FRC_Utility_Software
 {
-    class SftpConnection
+    public class SftpConnection
     {
         private SftpClient mSftpClient;
 
-        public SftpConnection(string host, string username, string password)
+        public SftpConnection(string host, string username, string password, Label statusLabel)
         {
             mSftpClient = new SftpClient(host, username, password);
-            Console.WriteLine("Starting Sftp connection");
+            statusLabel.Text = "Starting Sftp connection";
             mSftpClient.Connect();
+            statusLabel.Text = "Connection Successful";
         }
 
         public string DownloadSftpFile(string remoteFilePath)
@@ -26,6 +28,7 @@ namespace FRC_Utility_Software
             mSftpClient.DownloadFile(remoteFilePath, file);
 
             mSftpClient.Disconnect();
+            file.Close();
             return fileName;
         }
 
@@ -34,6 +37,11 @@ namespace FRC_Utility_Software
             // . always refers to the current directory.
             var files = mSftpClient.ListDirectory(remoteDirectory);
             return files;
+        }
+
+        public void ChangeDirectory(string newDirectory)
+        {
+            mSftpClient.ChangeDirectory(newDirectory);
         }
 
         public string DownloadMostCurrentSftpFile(string remoteFilePath)
@@ -92,7 +100,7 @@ namespace FRC_Utility_Software
             return new DateTime(year, month, day, hour, min, sec);
         }
 
-        void CloseSftpClient()
+        public void CloseSftpClient()
         {
             mSftpClient.Disconnect();
         }

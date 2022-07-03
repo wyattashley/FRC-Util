@@ -1,8 +1,6 @@
-﻿using System;
+﻿using FRCWaypointPloter;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -12,7 +10,8 @@ namespace FRC_Utility_Software
 {
     public partial class PathCreator : Form
     {
-        List<StepContainer> stepList;
+        StepList stepList = new StepList();
+        //List<StepContainer> stepList = new List<StepContainer>();
         public PathCreator()
         {
             InitializeComponent();
@@ -21,7 +20,6 @@ namespace FRC_Utility_Software
             flowLayoutPanel1.VerticalScroll.Visible = true;
             flowLayoutPanel1.VerticalScroll.Enabled = true;
 
-            stepList = new List<StepContainer>();
         }
 
         private void saveLocalButton_Click(object sender, EventArgs e)
@@ -34,28 +32,32 @@ namespace FRC_Utility_Software
                 {
                     sw.WriteLine("<?xml version=\"1.0\"?>");
                     sw.WriteLine("<Steps>");
-                    
-                    foreach(StepContainer a in stepList)
+
+                    //sw.Write(stepList[0].ToXML());
+                    foreach (StepContainer a in stepList.getList())
                     {
-                        sw.WriteLine(a.ToString());
+                        sw.Write(a.ToXML());
+                        //a.ToXML(sw);
                     }
 
                     sw.WriteLine("</Steps>");
+                    sw.Flush();
                 }
             }
         }
 
         private void addStepButton_Click(object sender, EventArgs e)
         {
-            stepList.Add(new StepContainer());
+            stepList.addStep(new StepContainer());
+            updateUserStepList();
         }
 
         private void removeStepButton_Click(object sender, EventArgs e)
         {
             int stepNumber = (int) removeStepNumeric.Value - 1;
 
-            if (stepNumber != -1)
-                stepList.RemoveAt(stepNumber);
+            if (stepNumber >= 0)
+                stepList.removeStep(stepNumber);
 
             updateUserStepList();
         }
@@ -65,28 +67,32 @@ namespace FRC_Utility_Software
             int stepNumber1 = (int) flipStepNumeric1.Value - 1;
             int stepNumber2 = (int) flipStepNumeric2.Value - 1;
 
-            if (stepNumber1 != -1 && stepNumber2 != -1 && stepNumber1 != stepNumber2 && stepNumber1 < stepList.Count && stepNumber2 < stepList.Count)
+            if (stepNumber1 >= 0 && stepNumber2 >= 0 && stepNumber1 != stepNumber2 && stepNumber1 < stepList.getLength() && stepNumber2 < stepList.getLength())
             {
-                StepContainer tmp1 = stepList[stepNumber1];
-                StepContainer tmp2 = stepList[stepNumber2];
-
-                stepList.RemoveAt(stepNumber1);
-                stepList.Insert(stepNumber1, tmp2);
-
-                stepList.RemoveAt(stepNumber2);
-                stepList.Insert(stepNumber2, tmp1);
+                stepList.flipStep(stepNumber1, stepNumber2);
             }
 
             updateUserStepList();
+        }
+
+        public void addToStepList(StepList steps)
+        {
+            stepList = new StepList(steps);
+            updateUserStepList();
+            //if (inheritedValues)
+            //    stepList.Clear();
+
+            //stepList.AddRange(givenSteps);
+            //updateUserStepList();
         }
 
         public void updateUserStepList()
         {
             flowLayoutPanel1.Controls.Clear();
 
-            for(int i = 0; i < stepList.Count; i++)
+            foreach(StepContainer stepContainer in stepList.getList())
             {
-                stepList[i].addToControl(flowLayoutPanel1.Controls, i + 1);
+                stepContainer.addToControl(flowLayoutPanel1.Controls);
             }
         }
 
@@ -176,17 +182,77 @@ namespace FRC_Utility_Software
                                 line2 = reader.ReadLine();
                             }
 
-                            container.addToControl(flowLayoutPanel1.Controls, stepList.Count + 1);
+                            stepList.addStep(container);
                         }
                     }
                 }
+
+                updateUserStepList();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            (new PathPlot()).Show();
+            PathPlot plot = new PathPlot(this, stepList);
+            plot.Show();
+            plot.FormClosed += onPathPlotClosed;
+        }
+
+        private void onPathPlotClosed(object sender, EventArgs e)
+        {
+            updateUserStepList();
+        }
+
+        private void onPositionChange(object sender, EventArgs e)
+        { 
+            Point2d startPosition = getStartingPosition();
+            foreach (StepContainer step in stepList.getList())
+            {
+                if (step.actionComboBox.Text.ToLower().Equals("setposition"))
+                {
+                    step.xDistanceNumeric.Value = (decimal) startPosition.getX();
+                    step.yDistanceNumeric.Value = (decimal) startPosition.getY();
+                    return;
+                }
+            }
+
+            StepContainer stepContainer = new StepContainer();
+            stepContainer.actionComboBox.Text = "SetPosition";
+            stepContainer.xDistanceNumeric.Value = (decimal)startPosition.getX();
+            stepContainer.yDistanceNumeric.Value = (decimal)startPosition.getY();
+            stepList.insertBeginningStep(stepContainer);
+
+            updateUserStepList();
+        }
+
+        public Point2d getStartingPosition()
+        {
+            if (red1.Checked)
+                return new Point2d(27.50, 19.50);
+
+            if (red2.Checked)
+                return new Point2d(31.00, 13.75);
+
+            if (red3.Checked)
+                return new Point2d(30.00, 10.00);
+
+
+            if (blue1.Checked)
+                return new Point2d(23.00, 7.50);
+
+            if (blue2.Checked)
+                return new Point2d(19.25, 14.25);
+
+            if (blue3.Checked)
+                return new Point2d(23.00, 7.50);
+
+            return null;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            stepList.clear();
+            updateUserStepList();
         }
     }
 }

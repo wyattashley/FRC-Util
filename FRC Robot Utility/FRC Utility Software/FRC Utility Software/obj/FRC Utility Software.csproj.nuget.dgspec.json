@@ -44,13 +44,29 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
-            "DotNetProjects.WpfToolkit.DataVisualization": {
+            "MathNet.Numerics": {
               "target": "Package",
-              "version": "[6.1.91, )"
+              "version": "[4.15.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "SSH.NET": {
               "target": "Package",
-              "version": "[2020.0.1, )"
+              "version": "[2020.0.2, )"
+            },
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[4.1.30, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            },
+            "System.Windows.Forms.DataVisualization": {
+              "target": "Package",
+              "version": "[1.0.0-prerelease.20110.1, )"
             }
           },
           "imports": [
@@ -71,7 +87,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
