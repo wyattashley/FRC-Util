@@ -416,6 +416,7 @@ namespace FRC_Utility_Software
             // 
             this.logTextboxView.Location = new System.Drawing.Point(475, 37);
             this.logTextboxView.Name = "logTextboxView";
+            this.logTextboxView.ReadOnly = true;
             this.logTextboxView.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal;
             this.logTextboxView.Size = new System.Drawing.Size(830, 698);
             this.logTextboxView.TabIndex = 34;
@@ -428,6 +429,7 @@ namespace FRC_Utility_Software
             this.verticalScrollBar.Location = new System.Drawing.Point(1308, 36);
             this.verticalScrollBar.Name = "verticalScrollBar";
             this.verticalScrollBar.Size = new System.Drawing.Size(26, 699);
+            this.verticalScrollBar.SmallChange = 2;
             this.verticalScrollBar.TabIndex = 100;
             this.verticalScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.verticalScrollBar_Scroll);
             // 
@@ -633,6 +635,7 @@ namespace FRC_Utility_Software
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
             this.Name = "MainProject";
             this.Text = "Main Project";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainProject_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.HourEntry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinuteEntry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondEntry)).EndInit();

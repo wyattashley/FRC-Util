@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -25,12 +26,14 @@ namespace FRC_Utility_Software
         public MainProject()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            logTextboxView.GotFocus += (object sender, EventArgs e) => { HourEntry.Focus(); };
         }
 
         public void updateLogText()
         {
 
-            if (lines.Length == 0)
+            if (lines != null && lines.Length == 0)
                 return;
 
             int totalLength = 0;
@@ -123,14 +126,14 @@ namespace FRC_Utility_Software
             int lineIndex = 0;
             foreach (string line in logTextboxView.Text.Split("\n"))
             {
+                logTextboxView.Select(logTextboxView.GetFirstCharIndexFromLine(lineIndex), line.Length);
+
                 lineIndex++;
 
                 if (!Regex.Match(line, standardFormatedLineRegex).Success)
                 {
                     continue;
                 }
-
-                logTextboxView.Select(logTextboxView.GetFirstCharIndexFromLine(lineIndex), line.Length);
 
                 char id = line[16];
                 switch (id)
@@ -345,5 +348,61 @@ namespace FRC_Utility_Software
         {
             (new GraphingUtility(keyValue.Text, lines)).Show();
         }
+
+        
+        private void MainProject_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Down)
+            {
+                if (verticalScrollBar.Value + verticalScrollBar.SmallChange <= verticalScrollBar.Maximum)
+                {
+                    verticalScrollBar.Value += verticalScrollBar.SmallChange;
+                } else
+                {
+                    verticalScrollBar.Value = verticalScrollBar.Maximum;
+                }
+
+
+                updateLogText();
+            }
+            else if (e.KeyData == Keys.Up)
+            {
+                if (verticalScrollBar.Value - verticalScrollBar.SmallChange >= 0)
+                {
+                    verticalScrollBar.Value -= verticalScrollBar.SmallChange;
+                } else
+                {
+                    verticalScrollBar.Value = verticalScrollBar.Minimum;
+                }
+
+
+                updateLogText();
+            }
+            else if (e.KeyData == Keys.PageDown)
+            {
+                if (verticalScrollBar.Value + verticalScrollBar.LargeChange <= verticalScrollBar.Maximum)
+                {
+                    verticalScrollBar.Value += verticalScrollBar.LargeChange;
+                } else
+                {
+                    verticalScrollBar.Value = verticalScrollBar.Maximum;
+                }
+
+                updateLogText();
+            }
+            else if (e.KeyData == Keys.PageUp)
+            {
+                if (verticalScrollBar.Value - verticalScrollBar.LargeChange >= 0)
+                {
+                    verticalScrollBar.Value -= verticalScrollBar.LargeChange;
+                } else
+                {
+                    verticalScrollBar.Value = 0;
+                }
+
+                updateLogText();
+            }
+        }
+
     }
 }
