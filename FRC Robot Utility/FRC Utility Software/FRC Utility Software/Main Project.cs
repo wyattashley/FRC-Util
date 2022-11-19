@@ -19,8 +19,8 @@ namespace FRC_Utility_Software
         private string[] lines;
         private int[] lengths;
         private string tmpFilePath;
-        private string standardFormatedLineRegex = @"^\d{4}[_]\d{6}[_]\d{3}[-][WESD]";
-        private string standardDateFormat = "MMdd_HHmmss_fff";
+        private static string standardFormatedLineRegex = @"^\d{4}[_]\d{6}[_]\d{3}[-][WESDQ]";
+        private static string standardDateFormat = "MMdd_HHmmss_fff";
         private DateTime startTime;
 
         public MainProject()
@@ -112,6 +112,12 @@ namespace FRC_Utility_Software
                             lineCount();
                         }
                         break;
+                    default:
+                        if (OtherColorCheckbox.Checked)
+                        {
+                            lineCount();
+                        }
+                        break;
                 }
             }
 
@@ -192,6 +198,9 @@ namespace FRC_Utility_Software
                         break;
                     case 'D':
                         lengths[3]++;
+                        break;
+                    default:
+                        lengths[4]++;
                         break;
                 }
             }
@@ -318,6 +327,12 @@ namespace FRC_Utility_Software
                             viableLines++;
                         }
                         break;
+                    default:
+                        if (OtherColorCheckbox.Checked)
+                        {
+                            viableLines++;
+                        }
+                        break;
                 }
             }
 
@@ -339,7 +354,7 @@ namespace FRC_Utility_Software
                 return (start + end) / 2;
         }
 
-        public DateTime getLineTime(string line)
+        public static DateTime getLineTime(string line)
         {
             return DateTime.ParseExact(line.Substring(0, 15), standardDateFormat, CultureInfo.InvariantCulture);
         }

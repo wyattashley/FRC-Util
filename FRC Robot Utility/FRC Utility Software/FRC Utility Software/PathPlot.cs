@@ -219,9 +219,9 @@ namespace FRC_Utility_Software
             {
                 double x = mainChart.ChartAreas[0].CursorX.Position;
                 double y = mainChart.ChartAreas[0].CursorY.Position;
-                if (addWaypointRatio.Checked)
+                if (addWaypointRatio.Checked || addCommandRatio.Checked)
                 {
-                    for(int i = 0; i < stepList.getLength();) //waypoints.Points.Count;)
+                    for(int i = 0; i <= stepList.getLength(); i++) //waypoints.Points.Count;)
                     {
                         generatedWaypoints.Points.Clear();
                         //double tmpX = waypoints.Points[i].XValue;
@@ -230,32 +230,11 @@ namespace FRC_Utility_Software
                         //double tmpY = waypoints.Points[i].YValues[0];
                         if (x - 1 <= tmpX && x + 1 >= tmpX && y - 1 <= tmpY && y + 1 >= tmpY && stepList.get(i).actionComboBox.Text.ToLower().Equals("drive"))
                         {
-                            stepList.removeStepNumberInType("drive", i);
+                            stepList.removeStepNumberInWaypoints(i);
                             //splinePointAngles.RemoveAt(i);
                             updateUserStepList(sender, e);
                             onCommandChanged(sender, e);
-                        } else
-                        {
-                            i++;
-                        }
-                    }
-                }
-                else if (addCommandRatio.Checked)
-                {
-                    for (int i = 0; i < commandPoints.Points.Count;)
-                    {
-                        generatedWaypoints.Points.Clear();
-                        double tmpX = commandPoints.Points[i].XValue;
-                        double tmpY = commandPoints.Points[i].YValues[0];
-                        if (x - 1 <= tmpX && x + 1 >= tmpX && y - 1 <= tmpY && y + 1 >= tmpY)
-                        {
-                            stepList.removeStepNumberInType("drive", i, true);
-                            commandPoints.Points.RemoveAt(i);
-                            onCommandChanged(sender, e);
-                        }
-                        else
-                        {
-                            i++;
+                            break;
                         }
                     }
                 }
@@ -308,6 +287,13 @@ namespace FRC_Utility_Software
                 step.xDistanceNumeric.Value = (decimal)x;
                 step.yDistanceNumeric.Value = (decimal)y;
 
+                if(selectedPoint < stepList.getLength() - 1)
+                {
+                    StepContainer nextStep = stepList.get(selectedPoint + 1);
+                    Rotation2d angle = Rotation2d.fromRadians(Math.Atan2((double)(nextStep.yDistanceNumeric.Value - step.yDistanceNumeric.Value), (double)(nextStep.xDistanceNumeric.Value - step.xDistanceNumeric.Value)));
+                    step.parm1Numeric.Value = (decimal) angle.getDegrees();
+                }
+
                 selectedPointSeries.Points.Clear();
 
                 pointSelected = false;
@@ -348,16 +334,12 @@ namespace FRC_Utility_Software
                     //TODO add point to list to add 
                     step.addValues("drive", 10, .5, x, y, false, new double[0]);
 
-                    //if (stepList.getList().Count > 1)
-                    //{
-                    //    double preivousX = (double)stepList.getList()[stepList.getLength() - 1].xDistanceNumeric.Value;
-                    //    double preivousY = (double)stepList.getList()[stepList.getLength() - 1].yDistanceNumeric.Value;
-
-                    //    Rotation2d angle = Rotation2d.fromRadians(Math.Atan2(y - preivousY, x - preivousX));
-                    //    splinePointAngles.Add(angle);
-
-                    //    stepList.getList()[stepList.getLength() - 1].parm1Numeric.Value = (decimal) angle.getRadians();
-                    //}
+                    if (stepList.getLength() > 1)
+                    {
+                        StepContainer preiviousStep = stepList.get(stepList.getLength() - 1);
+                        Rotation2d angle = Rotation2d.fromRadians(Math.Atan2((double)(step.yDistanceNumeric.Value - preiviousStep.yDistanceNumeric.Value), (double)(step.xDistanceNumeric.Value - preiviousStep.xDistanceNumeric.Value)));
+                        preiviousStep.parm1Numeric.Value = (decimal)angle.getDegrees();
+                    }
 
                     step.addOnDistanceChange(onCommandChanged);
                     stepList.addStep(step);
@@ -405,7 +387,15 @@ namespace FRC_Utility_Software
 
         private void onGenerate(object sender, EventArgs e)
         {
-            spline = new QuinticHermiteSpline(waypoints.Points, splinePointAngles, 0.6); //0.8
+            List<Pose2d> poses = new List<Pose2d>();
+            foreach(StepContainer step in stepList.getList())
+            {
+                if (step.actionComboBox.Text.Equals("drive") || step.actionComboBox.Text.ToLower().Equals("setposition"))
+                {
+                    poses.Add(new Pose2d(new Point2d((double)step.xDistanceNumeric.Value, (double)step.yDistanceNumeric.Value), Rotation2d.fromDegrees((double)step.parm1Numeric.Value)));
+                }
+            }
+            spline = new QuinticHermiteSpline(poses, 0.6); //0.8
 
             List<PoseWithCurvature> poseWithCurvatures = spline.getSplinePoints();
             VelocityGenerator velocityGenerator = new VelocityGenerator(poseWithCurvatures, (double)maxVelocity.Value, (double)maxAcceleration.Value, (double)cornerPercent.Value);

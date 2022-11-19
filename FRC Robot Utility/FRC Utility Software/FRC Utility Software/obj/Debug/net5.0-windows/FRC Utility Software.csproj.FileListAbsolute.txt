@@ -35,7 +35,6 @@ C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC 
 C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.BlueAllianceAPI.resources
 C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.Display_Util.GraphicalDisplay.resources
 C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.OpenNetBrowsing.resources
-C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\right-arrow.bmp
 C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\obj\Debug\net5.0-windows\FRC_Utility_Software.GraphingUtility.resources
 C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\ScottPlot.dll
 C:\Users\Wyatt\source\repos\FRC-Util\FRC Robot Utility\FRC Utility Software\FRC Utility Software\bin\Debug\net5.0-windows\ScottPlot.WinForms.dll

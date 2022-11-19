@@ -108,19 +108,22 @@ namespace FRC_Utility_Software
             return steps[0];
         }
 
-        public void removeStepNumberInType(string command, int pos)
+        public void removeStepNumberInWaypoints(int pos)
         {
-            removeStepNumberInType(command, pos, false);
+            removeStepNumberInType(new string[] { "drive", "setposition" }, pos, false);
         }
 
-        public void removeStepNumberInType(string command, int pos, bool notCommand)
+        public void removeStepNumberInType(string[] commands, int pos, bool notCommand)
         {
             int occurance = -1;
             for (int i = 0; i < steps.Count(); i++)
             {
-                if (notCommand ? !steps[i].actionComboBox.Text.ToLower().Equals(command) : steps[i].actionComboBox.Text.ToLower().Equals(command))
+                foreach (string str in commands)
                 {
-                    occurance++;
+                    if (notCommand ? !steps[i].actionComboBox.Text.ToLower().Equals(str) : steps[i].actionComboBox.Text.ToLower().Equals(str))
+                    {
+                        occurance++;
+                    }
                 }
 
                 if (occurance == pos)

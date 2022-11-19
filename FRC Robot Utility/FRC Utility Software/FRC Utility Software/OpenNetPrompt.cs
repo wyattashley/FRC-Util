@@ -39,13 +39,9 @@ namespace FRC_Utility_Software
             SftpConnection sftp;
 
 
-            sftp = new SftpConnection(address, username, password, StatusDisplay);
-            if(UnkownLocation.Checked)
-            {
-                (new OpenNetBrowsing(sftp)).Show();
-            }
-
-/*            if (!teamNumber.Equals(0))
+            //sftp = new SftpConnection(address, username, password, StatusDisplay);
+            
+            if (!teamNumber.Equals(0))
             {
                 sftp = new SftpConnection("roborio-" + teamNumber + "-frc.local", "lvuser", "", StatusDisplay);
             } else
@@ -53,23 +49,30 @@ namespace FRC_Utility_Software
                 sftp = new SftpConnection(address, username, password, StatusDisplay);
             }
 
-            string stringValue;
-
-            if(mostRecentLog)
+            if (UnkownLocation.Checked)
             {
-                if (logType.Equals("All"))
-                {
-                    stringValue = sftp.DownloadMostCurrentSftpFile(fileLocation);
-                }
-                else
-                {
-                    stringValue = sftp.DownloadMostCurrentSftpFile(fileLocation, logType);
-                }
+                (new OpenNetBrowsing(sftp)).Show();
             }
-            else
-            {
-                stringValue = sftp.DownloadSftpFile(fileLocation + logName);
-            }*/
+
+            /*
+
+                        string stringValue;
+
+                        if(mostRecentLog)
+                        {
+                            if (logType.Equals("All"))
+                            {
+                                stringValue = sftp.DownloadMostCurrentSftpFile(fileLocation);
+                            }
+                            else
+                            {
+                                stringValue = sftp.DownloadMostCurrentSftpFile(fileLocation, logType);
+                            }
+                        }
+                        else
+                        {
+                            stringValue = sftp.DownloadSftpFile(fileLocation + logName);
+                        }*/
             //Program.mainProjectInstance.openFile(stringValue);
             this.Close();
             //Program.mainProjectInstance.OpenActionButton_Click(sender, e);

@@ -110,43 +110,43 @@ namespace FRCWaypointPloter
             Console.WriteLine(splines.Count());
         }
 
-        public QuinticHermiteSpline(DataPointCollection points, List<Rotation2d> pointAngles, double horizontalScaler)
-        {
-            List<Pose2d> pose = new List<Pose2d>();
+        //public QuinticHermiteSpline(DataPointCollection points, List<Rotation2d> pointAngles, double horizontalScaler)
+        //{
+        //    List<Pose2d> pose = new List<Pose2d>();
 
-            if (points.Count() == 0)
-                return;
+        //    if (points.Count() == 0)
+        //        return;
 
 
-            Rotation2d rotation = Rotation2d.fromDegrees(0);
-            double maxAngles = pointAngles.Count();
+            //Rotation2d rotation = Rotation2d.fromDegrees(0);
+            //double maxAngles = pointAngles.Count();
 
-            for (int a = 0; a < points.Count() - 1; a++)
-            {
+            //for (int a = 0; a < points.Count() - 1; a++)
+            //{
 
-                if (maxAngles > a && (double) pointAngles[a].getDegrees() != 0.0)
-                {
-                    rotation = pointAngles[a];
-                }
-                else
-                {
-                    rotation = Rotation2d.fromRadians(Math.Atan2(points[a + 1].YValues[0] - points[a].YValues[0], points[a + 1].XValue - points[a].XValue));
-                }
-                pose.Add(new Pose2d(new Point2d(points[a].XValue, points[a].YValues[0]), rotation));
-            }
+            //    if (maxAngles > a && (double) pointAngles[a].getDegrees() != 0.0)
+            //    {
+            //        rotation = pointAngles[a];
+            //    }
+            //    else
+            //    {
+            //        rotation = Rotation2d.fromRadians(Math.Atan2(points[a + 1].YValues[0] - points[a].YValues[0], points[a + 1].XValue - points[a].XValue));
+            //    }
+            //    pose.Add(new Pose2d(new Point2d(points[a].XValue, points[a].YValues[0]), rotation));
+            //}
 
-            if (pointAngles.Count() >= points.Count())
-            {
-                pose.Add(new Pose2d(new Point2d(points[points.Count() - 1].XValue, points[points.Count() - 1].YValues[0]), pointAngles[points.Count() - 1]));
-            }
-            else
-            {
-                pose.Add(new Pose2d(new Point2d(points[points.Count() - 1].XValue, points[points.Count() - 1].YValues[0]), rotation));
-            }
+            //if (pointAngles.Count() >= points.Count())
+            //{
+            //    pose.Add(new Pose2d(new Point2d(points[points.Count() - 1].XValue, points[points.Count() - 1].YValues[0]), pointAngles[points.Count() - 1]));
+            //}
+            //else
+            //{
+            //    pose.Add(new Pose2d(new Point2d(points[points.Count() - 1].XValue, points[points.Count() - 1].YValues[0]), rotation));
+            //}
 
-            QuinticHermiteSpline b = new QuinticHermiteSpline(pose, horizontalScaler);
-            splines = b.getSplines();
-        }
+        //    QuinticHermiteSpline b = new QuinticHermiteSpline(pose, horizontalScaler);
+        //    splines = b.getSplines();
+        //}
 
 
         public static Matrix<double> getHermiteBasis()
