@@ -21,7 +21,6 @@ namespace FRC_Utility_Software
             Application.SetCompatibleTextRenderingDefault(false);
             mainProjectInstance = new MainProject();
             Application.Run(mainProjectInstance);
-
         }
     }
 }

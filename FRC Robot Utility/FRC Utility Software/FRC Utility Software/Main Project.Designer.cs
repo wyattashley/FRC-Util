@@ -74,6 +74,7 @@ namespace FRC_Utility_Software
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HourEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinuteEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondEntry)).BeginInit();
@@ -83,7 +84,7 @@ namespace FRC_Utility_Software
             // 
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 0;
             // 
             // TeamTitle
@@ -91,9 +92,9 @@ namespace FRC_Utility_Software
             this.TeamTitle.AutoSize = true;
             this.TeamTitle.BackColor = System.Drawing.Color.Transparent;
             this.TeamTitle.Font = new System.Drawing.Font("SF Sports Night", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TeamTitle.Location = new System.Drawing.Point(13, 13);
+            this.TeamTitle.Location = new System.Drawing.Point(11, 10);
             this.TeamTitle.Name = "TeamTitle";
-            this.TeamTitle.Size = new System.Drawing.Size(221, 31);
+            this.TeamTitle.Size = new System.Drawing.Size(181, 25);
             this.TeamTitle.TabIndex = 1;
             this.TeamTitle.Text = "Team 2137";
             // 
@@ -101,9 +102,9 @@ namespace FRC_Utility_Software
             // 
             this.AutoTypebox.AutoSize = true;
             this.AutoTypebox.Font = new System.Drawing.Font("SF Sports Night", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AutoTypebox.Location = new System.Drawing.Point(486, 748);
+            this.AutoTypebox.Location = new System.Drawing.Point(425, 561);
             this.AutoTypebox.Name = "AutoTypebox";
-            this.AutoTypebox.Size = new System.Drawing.Size(69, 20);
+            this.AutoTypebox.Size = new System.Drawing.Size(58, 16);
             this.AutoTypebox.TabIndex = 2;
             this.AutoTypebox.Text = "Auto";
             // 
@@ -111,9 +112,9 @@ namespace FRC_Utility_Software
             // 
             this.TeleopTypebox.AutoSize = true;
             this.TeleopTypebox.Font = new System.Drawing.Font("SF Sports Night", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TeleopTypebox.Location = new System.Drawing.Point(570, 748);
+            this.TeleopTypebox.Location = new System.Drawing.Point(499, 561);
             this.TeleopTypebox.Name = "TeleopTypebox";
-            this.TeleopTypebox.Size = new System.Drawing.Size(96, 20);
+            this.TeleopTypebox.Size = new System.Drawing.Size(82, 16);
             this.TeleopTypebox.TabIndex = 3;
             this.TeleopTypebox.Text = "Teleop";
             // 
@@ -121,9 +122,9 @@ namespace FRC_Utility_Software
             // 
             this.DisableTypebox.AutoSize = true;
             this.DisableTypebox.Font = new System.Drawing.Font("SF Sports Night", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DisableTypebox.Location = new System.Drawing.Point(678, 748);
+            this.DisableTypebox.Location = new System.Drawing.Point(593, 561);
             this.DisableTypebox.Name = "DisableTypebox";
-            this.DisableTypebox.Size = new System.Drawing.Size(119, 20);
+            this.DisableTypebox.Size = new System.Drawing.Size(100, 16);
             this.DisableTypebox.TabIndex = 4;
             this.DisableTypebox.Text = "Disabled";
             // 
@@ -131,18 +132,18 @@ namespace FRC_Utility_Software
             // 
             this.LogFileName.AutoSize = true;
             this.LogFileName.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LogFileName.Location = new System.Drawing.Point(570, 9);
+            this.LogFileName.Location = new System.Drawing.Point(499, 7);
             this.LogFileName.Name = "LogFileName";
-            this.LogFileName.Size = new System.Drawing.Size(0, 25);
+            this.LogFileName.Size = new System.Drawing.Size(0, 20);
             this.LogFileName.TabIndex = 5;
             // 
             // LogFileNamePlace
             // 
             this.LogFileNamePlace.AutoSize = true;
             this.LogFileNamePlace.Font = new System.Drawing.Font("Adobe Gothic Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LogFileNamePlace.Location = new System.Drawing.Point(475, 6);
+            this.LogFileNamePlace.Location = new System.Drawing.Point(416, 4);
             this.LogFileNamePlace.Name = "LogFileNamePlace";
-            this.LogFileNamePlace.Size = new System.Drawing.Size(89, 25);
+            this.LogFileNamePlace.Size = new System.Drawing.Size(69, 20);
             this.LogFileNamePlace.TabIndex = 6;
             this.LogFileNamePlace.Text = "Log File:";
             // 
@@ -152,9 +153,10 @@ namespace FRC_Utility_Software
             this.OpenActionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenActionButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OpenActionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.OpenActionButton.Location = new System.Drawing.Point(18, 58);
+            this.OpenActionButton.Location = new System.Drawing.Point(16, 44);
+            this.OpenActionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OpenActionButton.Name = "OpenActionButton";
-            this.OpenActionButton.Size = new System.Drawing.Size(87, 35);
+            this.OpenActionButton.Size = new System.Drawing.Size(76, 26);
             this.OpenActionButton.TabIndex = 7;
             this.OpenActionButton.Text = "Open";
             this.OpenActionButton.UseVisualStyleBackColor = false;
@@ -166,9 +168,10 @@ namespace FRC_Utility_Software
             this.OpenNetActionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenNetActionButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OpenNetActionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.OpenNetActionButton.Location = new System.Drawing.Point(111, 58);
+            this.OpenNetActionButton.Location = new System.Drawing.Point(97, 44);
+            this.OpenNetActionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OpenNetActionButton.Name = "OpenNetActionButton";
-            this.OpenNetActionButton.Size = new System.Drawing.Size(123, 35);
+            this.OpenNetActionButton.Size = new System.Drawing.Size(108, 26);
             this.OpenNetActionButton.TabIndex = 8;
             this.OpenNetActionButton.Text = "Open Net";
             this.OpenNetActionButton.UseVisualStyleBackColor = false;
@@ -180,9 +183,10 @@ namespace FRC_Utility_Software
             this.SaveActionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveActionButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SaveActionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.SaveActionButton.Location = new System.Drawing.Point(240, 58);
+            this.SaveActionButton.Location = new System.Drawing.Point(210, 44);
+            this.SaveActionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SaveActionButton.Name = "SaveActionButton";
-            this.SaveActionButton.Size = new System.Drawing.Size(94, 35);
+            this.SaveActionButton.Size = new System.Drawing.Size(82, 26);
             this.SaveActionButton.TabIndex = 9;
             this.SaveActionButton.Text = "Save";
             this.SaveActionButton.UseVisualStyleBackColor = false;
@@ -192,9 +196,9 @@ namespace FRC_Utility_Software
             // 
             this.ShowText.AutoSize = true;
             this.ShowText.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ShowText.Location = new System.Drawing.Point(18, 108);
+            this.ShowText.Location = new System.Drawing.Point(16, 81);
             this.ShowText.Name = "ShowText";
-            this.ShowText.Size = new System.Drawing.Size(72, 27);
+            this.ShowText.Size = new System.Drawing.Size(59, 22);
             this.ShowText.TabIndex = 10;
             this.ShowText.Text = "Show";
             // 
@@ -203,9 +207,10 @@ namespace FRC_Utility_Software
             this.StatusColorCheckbox.AutoSize = true;
             this.StatusColorCheckbox.Checked = true;
             this.StatusColorCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.StatusColorCheckbox.Location = new System.Drawing.Point(24, 138);
+            this.StatusColorCheckbox.Location = new System.Drawing.Point(21, 104);
+            this.StatusColorCheckbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StatusColorCheckbox.Name = "StatusColorCheckbox";
-            this.StatusColorCheckbox.Size = new System.Drawing.Size(18, 17);
+            this.StatusColorCheckbox.Size = new System.Drawing.Size(15, 14);
             this.StatusColorCheckbox.TabIndex = 11;
             this.StatusColorCheckbox.UseVisualStyleBackColor = true;
             this.StatusColorCheckbox.CheckedChanged += new System.EventHandler(this.ColorCheckbox_CheckedChanged);
@@ -215,9 +220,10 @@ namespace FRC_Utility_Software
             this.WarningColorCheckbox.AutoSize = true;
             this.WarningColorCheckbox.Checked = true;
             this.WarningColorCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.WarningColorCheckbox.Location = new System.Drawing.Point(24, 168);
+            this.WarningColorCheckbox.Location = new System.Drawing.Point(21, 126);
+            this.WarningColorCheckbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WarningColorCheckbox.Name = "WarningColorCheckbox";
-            this.WarningColorCheckbox.Size = new System.Drawing.Size(18, 17);
+            this.WarningColorCheckbox.Size = new System.Drawing.Size(15, 14);
             this.WarningColorCheckbox.TabIndex = 12;
             this.WarningColorCheckbox.UseVisualStyleBackColor = true;
             this.WarningColorCheckbox.CheckedChanged += new System.EventHandler(this.ColorCheckbox_CheckedChanged);
@@ -227,9 +233,10 @@ namespace FRC_Utility_Software
             this.DebugColorCheckbox.AutoSize = true;
             this.DebugColorCheckbox.Checked = true;
             this.DebugColorCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.DebugColorCheckbox.Location = new System.Drawing.Point(24, 198);
+            this.DebugColorCheckbox.Location = new System.Drawing.Point(21, 148);
+            this.DebugColorCheckbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DebugColorCheckbox.Name = "DebugColorCheckbox";
-            this.DebugColorCheckbox.Size = new System.Drawing.Size(18, 17);
+            this.DebugColorCheckbox.Size = new System.Drawing.Size(15, 14);
             this.DebugColorCheckbox.TabIndex = 13;
             this.DebugColorCheckbox.UseVisualStyleBackColor = true;
             this.DebugColorCheckbox.CheckedChanged += new System.EventHandler(this.ColorCheckbox_CheckedChanged);
@@ -239,9 +246,10 @@ namespace FRC_Utility_Software
             this.ErrorColorCheckbox.AutoSize = true;
             this.ErrorColorCheckbox.Checked = true;
             this.ErrorColorCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ErrorColorCheckbox.Location = new System.Drawing.Point(24, 228);
+            this.ErrorColorCheckbox.Location = new System.Drawing.Point(21, 171);
+            this.ErrorColorCheckbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ErrorColorCheckbox.Name = "ErrorColorCheckbox";
-            this.ErrorColorCheckbox.Size = new System.Drawing.Size(18, 17);
+            this.ErrorColorCheckbox.Size = new System.Drawing.Size(15, 14);
             this.ErrorColorCheckbox.TabIndex = 14;
             this.ErrorColorCheckbox.UseVisualStyleBackColor = true;
             this.ErrorColorCheckbox.CheckedChanged += new System.EventHandler(this.ColorCheckbox_CheckedChanged);
@@ -250,9 +258,9 @@ namespace FRC_Utility_Software
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Aqua;
-            this.label2.Location = new System.Drawing.Point(50, 135);
+            this.label2.Location = new System.Drawing.Point(44, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 20);
+            this.label2.Size = new System.Drawing.Size(16, 15);
             this.label2.TabIndex = 15;
             this.label2.Text = "   ";
             // 
@@ -260,9 +268,9 @@ namespace FRC_Utility_Software
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(50, 165);
+            this.label3.Location = new System.Drawing.Point(44, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 20);
+            this.label3.Size = new System.Drawing.Size(16, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "   ";
             // 
@@ -270,9 +278,9 @@ namespace FRC_Utility_Software
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(50, 195);
+            this.label4.Location = new System.Drawing.Point(44, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 20);
+            this.label4.Size = new System.Drawing.Size(16, 15);
             this.label4.TabIndex = 17;
             this.label4.Text = "   ";
             // 
@@ -280,9 +288,9 @@ namespace FRC_Utility_Software
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(50, 225);
+            this.label5.Location = new System.Drawing.Point(44, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 20);
+            this.label5.Size = new System.Drawing.Size(16, 15);
             this.label5.TabIndex = 18;
             this.label5.Text = "   ";
             // 
@@ -290,9 +298,9 @@ namespace FRC_Utility_Software
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(77, 135);
+            this.label6.Location = new System.Drawing.Point(67, 101);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 23);
+            this.label6.Size = new System.Drawing.Size(59, 21);
             this.label6.TabIndex = 19;
             this.label6.Text = "Status";
             // 
@@ -300,9 +308,9 @@ namespace FRC_Utility_Software
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(77, 165);
+            this.label7.Location = new System.Drawing.Point(67, 124);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 23);
+            this.label7.Size = new System.Drawing.Size(75, 21);
             this.label7.TabIndex = 20;
             this.label7.Text = "Warning";
             // 
@@ -310,9 +318,9 @@ namespace FRC_Utility_Software
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(77, 195);
+            this.label8.Location = new System.Drawing.Point(67, 146);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 23);
+            this.label8.Size = new System.Drawing.Size(64, 21);
             this.label8.TabIndex = 21;
             this.label8.Text = "Debug";
             // 
@@ -320,9 +328,9 @@ namespace FRC_Utility_Software
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(77, 225);
+            this.label9.Location = new System.Drawing.Point(67, 169);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 23);
+            this.label9.Size = new System.Drawing.Size(44, 21);
             this.label9.TabIndex = 22;
             this.label9.Text = "Error";
             // 
@@ -330,9 +338,9 @@ namespace FRC_Utility_Software
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(30, 308);
+            this.label10.Location = new System.Drawing.Point(26, 231);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 27);
+            this.label10.Size = new System.Drawing.Size(69, 22);
             this.label10.TabIndex = 23;
             this.label10.Text = "GOTO";
             // 
@@ -342,9 +350,10 @@ namespace FRC_Utility_Software
             this.GoActionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoActionButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.GoActionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.GoActionButton.Location = new System.Drawing.Point(368, 308);
+            this.GoActionButton.Location = new System.Drawing.Point(322, 231);
+            this.GoActionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GoActionButton.Name = "GoActionButton";
-            this.GoActionButton.Size = new System.Drawing.Size(62, 27);
+            this.GoActionButton.Size = new System.Drawing.Size(54, 20);
             this.GoActionButton.TabIndex = 25;
             this.GoActionButton.Text = "GO";
             this.GoActionButton.UseVisualStyleBackColor = false;
@@ -361,9 +370,10 @@ namespace FRC_Utility_Software
             this.createAutonFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createAutonFile.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.createAutonFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.createAutonFile.Location = new System.Drawing.Point(111, 666);
+            this.createAutonFile.Location = new System.Drawing.Point(97, 500);
+            this.createAutonFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.createAutonFile.Name = "createAutonFile";
-            this.createAutonFile.Size = new System.Drawing.Size(226, 41);
+            this.createAutonFile.Size = new System.Drawing.Size(198, 31);
             this.createAutonFile.TabIndex = 29;
             this.createAutonFile.Text = "Create Autonomous File";
             this.createAutonFile.UseVisualStyleBackColor = false;
@@ -375,18 +385,19 @@ namespace FRC_Utility_Software
             this.keyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.keyValue.Font = new System.Drawing.Font("Adobe Gothic Std B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.keyValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.keyValue.Location = new System.Drawing.Point(128, 422);
+            this.keyValue.Location = new System.Drawing.Point(112, 316);
+            this.keyValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.keyValue.Name = "keyValue";
-            this.keyValue.Size = new System.Drawing.Size(195, 37);
+            this.keyValue.Size = new System.Drawing.Size(171, 31);
             this.keyValue.TabIndex = 30;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(113, 392);
+            this.label12.Location = new System.Drawing.Point(99, 294);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(224, 27);
+            this.label12.Size = new System.Drawing.Size(180, 22);
             this.label12.TabIndex = 31;
             this.label12.Text = "Network Table Key";
             // 
@@ -396,9 +407,10 @@ namespace FRC_Utility_Software
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.button1.Location = new System.Drawing.Point(180, 465);
+            this.button1.Location = new System.Drawing.Point(158, 349);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 27);
+            this.button1.Size = new System.Drawing.Size(84, 20);
             this.button1.TabIndex = 32;
             this.button1.Text = "Graph";
             this.button1.UseVisualStyleBackColor = false;
@@ -407,18 +419,19 @@ namespace FRC_Utility_Software
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(486, 41);
+            this.label13.Location = new System.Drawing.Point(425, 31);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(0, 20);
+            this.label13.Size = new System.Drawing.Size(0, 15);
             this.label13.TabIndex = 33;
             // 
             // logTextboxView
             // 
-            this.logTextboxView.Location = new System.Drawing.Point(475, 37);
+            this.logTextboxView.Location = new System.Drawing.Point(416, 28);
+            this.logTextboxView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logTextboxView.Name = "logTextboxView";
             this.logTextboxView.ReadOnly = true;
             this.logTextboxView.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal;
-            this.logTextboxView.Size = new System.Drawing.Size(830, 698);
+            this.logTextboxView.Size = new System.Drawing.Size(727, 524);
             this.logTextboxView.TabIndex = 34;
             this.logTextboxView.Text = "";
             this.logTextboxView.WordWrap = false;
@@ -426,9 +439,9 @@ namespace FRC_Utility_Software
             // verticalScrollBar
             // 
             this.verticalScrollBar.LargeChange = 50;
-            this.verticalScrollBar.Location = new System.Drawing.Point(1308, 36);
+            this.verticalScrollBar.Location = new System.Drawing.Point(1144, 27);
             this.verticalScrollBar.Name = "verticalScrollBar";
-            this.verticalScrollBar.Size = new System.Drawing.Size(26, 699);
+            this.verticalScrollBar.Size = new System.Drawing.Size(26, 524);
             this.verticalScrollBar.SmallChange = 2;
             this.verticalScrollBar.TabIndex = 100;
             this.verticalScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.verticalScrollBar_Scroll);
@@ -439,9 +452,10 @@ namespace FRC_Utility_Software
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.button2.Location = new System.Drawing.Point(111, 713);
+            this.button2.Location = new System.Drawing.Point(97, 535);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 38);
+            this.button2.Size = new System.Drawing.Size(198, 28);
             this.button2.TabIndex = 36;
             this.button2.Text = "Blue Alliance";
             this.button2.UseVisualStyleBackColor = false;
@@ -451,9 +465,9 @@ namespace FRC_Utility_Software
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(77, 256);
+            this.label14.Location = new System.Drawing.Point(67, 192);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 23);
+            this.label14.Size = new System.Drawing.Size(56, 21);
             this.label14.TabIndex = 39;
             this.label14.Text = "Other";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -462,9 +476,9 @@ namespace FRC_Utility_Software
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(50, 256);
+            this.label15.Location = new System.Drawing.Point(44, 192);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 20);
+            this.label15.Size = new System.Drawing.Size(16, 15);
             this.label15.TabIndex = 38;
             this.label15.Text = "   ";
             // 
@@ -473,9 +487,10 @@ namespace FRC_Utility_Software
             this.OtherColorCheckbox.AutoSize = true;
             this.OtherColorCheckbox.Checked = true;
             this.OtherColorCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OtherColorCheckbox.Location = new System.Drawing.Point(24, 259);
+            this.OtherColorCheckbox.Location = new System.Drawing.Point(21, 194);
+            this.OtherColorCheckbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OtherColorCheckbox.Name = "OtherColorCheckbox";
-            this.OtherColorCheckbox.Size = new System.Drawing.Size(18, 17);
+            this.OtherColorCheckbox.Size = new System.Drawing.Size(15, 14);
             this.OtherColorCheckbox.TabIndex = 37;
             this.OtherColorCheckbox.UseVisualStyleBackColor = true;
             this.OtherColorCheckbox.CheckedChanged += new System.EventHandler(this.ColorCheckbox_CheckedChanged);
@@ -484,9 +499,9 @@ namespace FRC_Utility_Software
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(486, 791);
+            this.label16.Location = new System.Drawing.Point(425, 593);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(298, 27);
+            this.label16.Size = new System.Drawing.Size(236, 22);
             this.label16.TabIndex = 101;
             this.label16.Text = "Total Time (hh:mm:ss.SSS):";
             this.label16.Click += new System.EventHandler(this.label16_Click);
@@ -495,9 +510,9 @@ namespace FRC_Utility_Software
             // 
             this.totalTimeLabel.AutoSize = true;
             this.totalTimeLabel.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.totalTimeLabel.Location = new System.Drawing.Point(790, 791);
+            this.totalTimeLabel.Location = new System.Drawing.Point(691, 593);
             this.totalTimeLabel.Name = "totalTimeLabel";
-            this.totalTimeLabel.Size = new System.Drawing.Size(115, 27);
+            this.totalTimeLabel.Size = new System.Drawing.Size(97, 22);
             this.totalTimeLabel.TabIndex = 102;
             this.totalTimeLabel.Text = "00:00:000";
             // 
@@ -507,14 +522,15 @@ namespace FRC_Utility_Software
             this.HourEntry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.HourEntry.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.HourEntry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.HourEntry.Location = new System.Drawing.Point(118, 308);
+            this.HourEntry.Location = new System.Drawing.Point(103, 231);
+            this.HourEntry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HourEntry.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
             this.HourEntry.Name = "HourEntry";
-            this.HourEntry.Size = new System.Drawing.Size(65, 28);
+            this.HourEntry.Size = new System.Drawing.Size(57, 23);
             this.HourEntry.TabIndex = 5;
             this.HourEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -524,14 +540,15 @@ namespace FRC_Utility_Software
             this.MinuteEntry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MinuteEntry.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinuteEntry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.MinuteEntry.Location = new System.Drawing.Point(201, 308);
+            this.MinuteEntry.Location = new System.Drawing.Point(176, 231);
+            this.MinuteEntry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinuteEntry.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
             this.MinuteEntry.Name = "MinuteEntry";
-            this.MinuteEntry.Size = new System.Drawing.Size(65, 28);
+            this.MinuteEntry.Size = new System.Drawing.Size(57, 23);
             this.MinuteEntry.TabIndex = 5;
             this.MinuteEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -541,14 +558,15 @@ namespace FRC_Utility_Software
             this.SecondEntry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SecondEntry.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SecondEntry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.SecondEntry.Location = new System.Drawing.Point(285, 308);
+            this.SecondEntry.Location = new System.Drawing.Point(249, 231);
+            this.SecondEntry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SecondEntry.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
             this.SecondEntry.Name = "SecondEntry";
-            this.SecondEntry.Size = new System.Drawing.Size(65, 28);
+            this.SecondEntry.Size = new System.Drawing.Size(57, 23);
             this.SecondEntry.TabIndex = 5;
             this.SecondEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -556,9 +574,9 @@ namespace FRC_Utility_Software
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(119, 335);
+            this.label17.Location = new System.Drawing.Point(104, 251);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 27);
+            this.label17.Size = new System.Drawing.Size(36, 22);
             this.label17.TabIndex = 106;
             this.label17.Text = "HH";
             // 
@@ -566,9 +584,9 @@ namespace FRC_Utility_Software
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(201, 337);
+            this.label18.Location = new System.Drawing.Point(176, 253);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 27);
+            this.label18.Size = new System.Drawing.Size(44, 22);
             this.label18.TabIndex = 107;
             this.label18.Text = "MM";
             // 
@@ -576,18 +594,34 @@ namespace FRC_Utility_Software
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(285, 337);
+            this.label19.Location = new System.Drawing.Point(249, 253);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 27);
+            this.label19.Size = new System.Drawing.Size(28, 22);
             this.label19.TabIndex = 108;
             this.label19.Text = "SS";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
+            this.button3.Location = new System.Drawing.Point(97, 567);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(198, 28);
+            this.button3.TabIndex = 109;
+            this.button3.Text = "Blue Alliance";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // MainProject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(1355, 883);
+            this.ClientSize = new System.Drawing.Size(1186, 662);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -633,6 +667,7 @@ namespace FRC_Utility_Software
             this.Controls.Add(this.TeamTitle);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainProject";
             this.Text = "Main Project";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainProject_KeyDown);
@@ -690,6 +725,7 @@ namespace FRC_Utility_Software
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button3;
     }
 }
 

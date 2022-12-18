@@ -65,7 +65,7 @@ namespace FRC_Utility_Software
             this.actionComboBox.FormattingEnabled = true;
             //this.actionComboBox.Location = new System.Drawing.Point(63, 30);
             this.actionComboBox.Name = "actionComboBox";
-            this.actionComboBox.Size = new System.Drawing.Size(250, 28);
+            this.actionComboBox.Size = new System.Drawing.Size(100, 28);
             this.actionComboBox.TabIndex = 0;
 
             // 
@@ -88,7 +88,8 @@ namespace FRC_Utility_Software
             this.timeoutNumeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
             //this.timeoutNumeric.Location = new System.Drawing.Point(81, 59);
             this.timeoutNumeric.Name = "timeoutNumeric";
-            this.timeoutNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            //this.timeoutNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            this.timeoutNumeric.AutoSize = true;
             this.timeoutNumeric.TabIndex = 2;
             this.timeoutNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -133,7 +134,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm1Numeric.Name = "parm1Numeric";
-            this.parm1Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm1Numeric.AutoSize = true;
+            //this.parm1Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm1Numeric.TabIndex = 4;
             this.parm1Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm1Numeric.ThousandsSeparator = true;
@@ -177,7 +179,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm2Numeric.Name = "parm2Numeric";
-            this.parm2Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm2Numeric.AutoSize = true;
+            //this.parm2Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm2Numeric.TabIndex = 6;
             this.parm2Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm2Numeric.ThousandsSeparator = true;
@@ -210,7 +213,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm3Numeric.Name = "parm3Numeric";
-            this.parm3Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            //this.parm3Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm3Numeric.AutoSize = true;
             this.parm3Numeric.TabIndex = 6;
             this.parm3Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm3Numeric.ThousandsSeparator = true;
@@ -243,7 +247,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm4Numeric.Name = "parm4Numeric";
-            this.parm4Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm4Numeric.AutoSize = true;
+            //this.parm4Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm4Numeric.TabIndex = 6;
             this.parm4Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm4Numeric.ThousandsSeparator = true;
@@ -276,7 +281,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm5Numeric.Name = "parm5Numeric";
-            this.parm5Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm5Numeric.AutoSize = true;
+            //this.parm5Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm5Numeric.TabIndex = 8;
             this.parm5Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm5Numeric.ThousandsSeparator = true;
@@ -309,7 +315,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm6Numeric.Name = "parm6Numeric";
-            this.parm6Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm6Numeric.AutoSize = true;
+            //this.parm6Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm6Numeric.TabIndex = 6;
             this.parm6Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm6Numeric.ThousandsSeparator = true;
@@ -342,7 +349,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm7Numeric.Name = "parm7Numeric";
-            this.parm7Numeric.Size = new System.Drawing.Size(parmWidth, 26);
+            this.parm7Numeric.AutoSize = true;
+            //this.parm7Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm7Numeric.TabIndex = 10;
             this.parm7Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm7Numeric.ThousandsSeparator = true;
@@ -374,7 +382,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.speedNumeric.Name = "speedNumeric";
-            this.speedNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            //this.speedNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            this.speedNumeric.AutoSize = true;
             this.speedNumeric.TabIndex = 6;
             this.speedNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speedNumeric.ThousandsSeparator = true;
@@ -406,7 +415,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.xDistanceNumeric.Name = "xDistanceNumeric";
-            this.xDistanceNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            //this.xDistanceNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            this.xDistanceNumeric.AutoSize = true;
             this.xDistanceNumeric.TabIndex = 12;
             this.xDistanceNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.xDistanceNumeric.ThousandsSeparator = true;
@@ -438,7 +448,8 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.yDistanceNumeric.Name = "yDistanceNumeric";
-            this.yDistanceNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            //this.yDistanceNumeric.Size = new System.Drawing.Size(parmWidth, 27);
+            this.yDistanceNumeric.AutoSize = true;
             this.yDistanceNumeric.TabIndex = 14;
             this.yDistanceNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.yDistanceNumeric.ThousandsSeparator = true;
