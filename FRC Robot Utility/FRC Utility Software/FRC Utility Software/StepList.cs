@@ -28,22 +28,19 @@ namespace FRC_Utility_Software
         public void addStep(StepContainer step)
         {
             steps.Add(step);
-            step.changePosition(length + 1);
-            length++;
+            step.changePosition(steps.Count);
         }
 
         public void insertBeginningStep(StepContainer step)
         {
             steps.Insert(0, step);
-            step.changePosition(length + 1);
-            length++;
+            step.changePosition(steps.Count);
         }
 
         public void removeStep(int position)
         {
             steps.RemoveAt(position);
-            length--;
-            reNumber(position);
+            reNumber();
         }
 
         public void flipStep(int pos1, int pos2)
@@ -148,17 +145,17 @@ namespace FRC_Utility_Software
             length = 0;
         }
 
-        private void reNumber(int startPosition)
+        public void reNumber()
         {
-            for (int i = startPosition; i < steps.Count(); i++)
+            for (int i = 0; i < steps.Count(); i++)
             {
-                steps[i].changePosition(steps[i].getPosition() - 1);
+                steps[i].changePosition(i);
             }
         }
 
         public int getLength()
         {
-            return length;
+            return steps.Count();
         }
     }
 }

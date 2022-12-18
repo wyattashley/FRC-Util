@@ -13,7 +13,10 @@ namespace FRC_Utility_Software
 
         private StepList parentStepList;
 
-        public SplitContainer splitContainer = new SplitContainer();
+        public TableLayoutPanel tableLayoutPanel1 = new TableLayoutPanel();
+
+        public FlowLayoutPanel flowPane1 = new FlowLayoutPanel();
+        public FlowLayoutPanel flowPane2 = new FlowLayoutPanel();
 
         public Label stepNumberLabel = new Label();
 
@@ -44,14 +47,15 @@ namespace FRC_Utility_Software
         public Label parm7Label = new Label();
         public NumericUpDown parm7Numeric = new NumericUpDown();
 
-       
+        private int parmWidth = 200;
+
         public StepContainer()
         {
 
             this.stepNumberLabel.AutoSize = true;
             this.stepNumberLabel.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.stepNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.stepNumberLabel.Location = new System.Drawing.Point(3, 0);
+            //this.stepNumberLabel.Location = new System.Drawing.Point(3, 0);
             this.stepNumberLabel.Name = "stepNumberLabel";
             this.stepNumberLabel.Size = new System.Drawing.Size(63, 22);
             this.stepNumberLabel.TabIndex = 1;
@@ -59,9 +63,9 @@ namespace FRC_Utility_Software
 
             this.actionComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
             this.actionComboBox.FormattingEnabled = true;
-            this.actionComboBox.Location = new System.Drawing.Point(63, 30);
+            //this.actionComboBox.Location = new System.Drawing.Point(63, 30);
             this.actionComboBox.Name = "actionComboBox";
-            this.actionComboBox.Size = new System.Drawing.Size(151, 28);
+            this.actionComboBox.Size = new System.Drawing.Size(250, 28);
             this.actionComboBox.TabIndex = 0;
 
             // 
@@ -70,7 +74,7 @@ namespace FRC_Utility_Software
             this.actionLabel.AutoSize = true;
             this.actionLabel.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.actionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.actionLabel.Location = new System.Drawing.Point(3, 30);
+            //this.actionLabel.Location = new System.Drawing.Point(3, 30);
             this.actionLabel.Name = "actionLabel";
             this.actionLabel.Size = new System.Drawing.Size(63, 22);
             this.actionLabel.TabIndex = 1;
@@ -82,9 +86,9 @@ namespace FRC_Utility_Software
             this.timeoutNumeric.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
             this.timeoutNumeric.DecimalPlaces = 2;
             this.timeoutNumeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.timeoutNumeric.Location = new System.Drawing.Point(81, 59);
+            //this.timeoutNumeric.Location = new System.Drawing.Point(81, 59);
             this.timeoutNumeric.Name = "timeoutNumeric";
-            this.timeoutNumeric.Size = new System.Drawing.Size(133, 27);
+            this.timeoutNumeric.Size = new System.Drawing.Size(parmWidth, 27);
             this.timeoutNumeric.TabIndex = 2;
             this.timeoutNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -93,7 +97,7 @@ namespace FRC_Utility_Software
             this.timeout.AutoSize = true;
             this.timeout.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.timeout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.timeout.Location = new System.Drawing.Point(3, 59);
+            //this.timeout.Location = new System.Drawing.Point(3, 59);
             this.timeout.Name = "timeout";
             this.timeout.Size = new System.Drawing.Size(72, 22);
             this.timeout.TabIndex = 2;
@@ -104,7 +108,7 @@ namespace FRC_Utility_Software
             this.parrellelCheckBox.AutoSize = true;
             this.parrellelCheckBox.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parrellelCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parrellelCheckBox.Location = new System.Drawing.Point(3, 87);
+            //this.parrellelCheckBox.Location = new System.Drawing.Point(3, 87);
             this.parrellelCheckBox.Name = "parrellelCheckBox";
             this.parrellelCheckBox.Size = new System.Drawing.Size(89, 26);
             this.parrellelCheckBox.TabIndex = 3;
@@ -117,7 +121,7 @@ namespace FRC_Utility_Software
             this.parm1Numeric.Increment = 1;
             this.parm1Numeric.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm1Numeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.parm1Numeric.Location = new System.Drawing.Point(70, 30);
+            //this.parm1Numeric.Location = new System.Drawing.Point(70, 30);
             this.parm1Numeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -129,7 +133,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm1Numeric.Name = "parm1Numeric";
-            this.parm1Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm1Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm1Numeric.TabIndex = 4;
             this.parm1Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm1Numeric.ThousandsSeparator = true;
@@ -139,7 +143,7 @@ namespace FRC_Utility_Software
             this.parm1Label.AutoSize = true;
             this.parm1Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm1Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm1Label.Location = new System.Drawing.Point(9, 30);
+            //this.parm1Label.Location = new System.Drawing.Point(9, 30);
             this.parm1Label.Name = "parm1Label";
             this.parm1Label.Size = new System.Drawing.Size(57, 22);
             this.parm1Label.TabIndex = 5;
@@ -150,7 +154,7 @@ namespace FRC_Utility_Software
             this.parm2Label.AutoSize = true;
             this.parm2Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm2Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm2Label.Location = new System.Drawing.Point(9, 60);
+            //this.parm2Label.Location = new System.Drawing.Point(9, 60);
             this.parm2Label.Name = "parm2Label";
             this.parm2Label.Size = new System.Drawing.Size(59, 22);
             this.parm2Label.TabIndex = 7;
@@ -161,7 +165,7 @@ namespace FRC_Utility_Software
             this.parm2Numeric.DecimalPlaces = 2;
             this.parm2Numeric.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm2Numeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.parm2Numeric.Location = new System.Drawing.Point(70, 60);
+            //this.parm2Numeric.Location = new System.Drawing.Point(70, 60);
             this.parm2Numeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -173,7 +177,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm2Numeric.Name = "parm2Numeric";
-            this.parm2Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm2Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm2Numeric.TabIndex = 6;
             this.parm2Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm2Numeric.ThousandsSeparator = true;
@@ -183,7 +187,7 @@ namespace FRC_Utility_Software
             this.parm3Label.AutoSize = true;
             this.parm3Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm3Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm3Label.Location = new System.Drawing.Point(9, 90);
+            //this.parm3Label.Location = new System.Drawing.Point(9, 90);
             this.parm3Label.Name = "parm3Label";
             this.parm3Label.Size = new System.Drawing.Size(60, 22);
             this.parm3Label.TabIndex = 7;
@@ -194,7 +198,7 @@ namespace FRC_Utility_Software
             this.parm3Numeric.DecimalPlaces = 2;
             this.parm3Numeric.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm3Numeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.parm3Numeric.Location = new System.Drawing.Point(70, 90);
+            //this.parm3Numeric.Location = new System.Drawing.Point(70, 90);
             this.parm3Numeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -206,7 +210,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm3Numeric.Name = "parm3Numeric";
-            this.parm3Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm3Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm3Numeric.TabIndex = 6;
             this.parm3Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm3Numeric.ThousandsSeparator = true;
@@ -216,7 +220,7 @@ namespace FRC_Utility_Software
             this.parm4Label.AutoSize = true;
             this.parm4Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm4Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm4Label.Location = new System.Drawing.Point(9, 120);
+            //this.parm4Label.Location = new System.Drawing.Point(9, 120);
             this.parm4Label.Name = "parm4Label";
             this.parm4Label.Size = new System.Drawing.Size(59, 22);
             this.parm4Label.TabIndex = 7;
@@ -239,7 +243,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm4Numeric.Name = "parm4Numeric";
-            this.parm4Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm4Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm4Numeric.TabIndex = 6;
             this.parm4Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm4Numeric.ThousandsSeparator = true;
@@ -249,7 +253,7 @@ namespace FRC_Utility_Software
             this.parm5Label.AutoSize = true;
             this.parm5Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm5Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm5Label.Location = new System.Drawing.Point(9, 150);
+            //this.parm5Label.Location = new System.Drawing.Point(9, 150);
             this.parm5Label.Name = "parm5Label";
             this.parm5Label.Size = new System.Drawing.Size(60, 22);
             this.parm5Label.TabIndex = 9;
@@ -272,7 +276,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm5Numeric.Name = "parm5Numeric";
-            this.parm5Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm5Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm5Numeric.TabIndex = 8;
             this.parm5Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm5Numeric.ThousandsSeparator = true;
@@ -282,7 +286,7 @@ namespace FRC_Utility_Software
             this.parm6Label.AutoSize = true;
             this.parm6Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm6Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm6Label.Location = new System.Drawing.Point(9, 180);
+            //this.parm6Label.Location = new System.Drawing.Point(9, 180);
             this.parm6Label.Name = "parm6Label";
             this.parm6Label.Size = new System.Drawing.Size(60, 22);
             this.parm6Label.TabIndex = 7;
@@ -305,7 +309,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm6Numeric.Name = "parm6Numeric";
-            this.parm6Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm6Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm6Numeric.TabIndex = 6;
             this.parm6Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm6Numeric.ThousandsSeparator = true;
@@ -315,7 +319,7 @@ namespace FRC_Utility_Software
             this.parm7Label.AutoSize = true;
             this.parm7Label.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm7Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.parm7Label.Location = new System.Drawing.Point(9, 210);
+            //this.parm7Label.Location = new System.Drawing.Point(9, 210);
             this.parm7Label.Name = "parm7Label";
             this.parm7Label.Size = new System.Drawing.Size(57, 22);
             this.parm7Label.TabIndex = 11;
@@ -326,7 +330,7 @@ namespace FRC_Utility_Software
             this.parm7Numeric.DecimalPlaces = 2;
             this.parm7Numeric.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parm7Numeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.parm7Numeric.Location = new System.Drawing.Point(70, 210);
+            //this.parm7Numeric.Location = new System.Drawing.Point(70, 210);
             this.parm7Numeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -338,7 +342,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.parm7Numeric.Name = "parm7Numeric";
-            this.parm7Numeric.Size = new System.Drawing.Size(118, 26);
+            this.parm7Numeric.Size = new System.Drawing.Size(parmWidth, 26);
             this.parm7Numeric.TabIndex = 10;
             this.parm7Numeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.parm7Numeric.ThousandsSeparator = true;
@@ -348,7 +352,7 @@ namespace FRC_Utility_Software
             this.speedLabel.AutoSize = true;
             this.speedLabel.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.speedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.speedLabel.Location = new System.Drawing.Point(3, 116);
+            //this.speedLabel.Location = new System.Drawing.Point(3, 116);
             this.speedLabel.Name = "speedLabel";
             this.speedLabel.Size = new System.Drawing.Size(62, 22);
             this.speedLabel.TabIndex = 7;
@@ -370,7 +374,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.speedNumeric.Name = "speedNumeric";
-            this.speedNumeric.Size = new System.Drawing.Size(118, 27);
+            this.speedNumeric.Size = new System.Drawing.Size(parmWidth, 27);
             this.speedNumeric.TabIndex = 6;
             this.speedNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.speedNumeric.ThousandsSeparator = true;
@@ -380,7 +384,7 @@ namespace FRC_Utility_Software
             this.xDistanceLabel.AutoSize = true;
             this.xDistanceLabel.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.xDistanceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.xDistanceLabel.Location = new System.Drawing.Point(3, 146);
+            //this.xDistanceLabel.Location = new System.Drawing.Point(3, 146);
             this.xDistanceLabel.Name = "xDistanceLabel";
             this.xDistanceLabel.Size = new System.Drawing.Size(90, 22);
             this.xDistanceLabel.TabIndex = 13;
@@ -390,7 +394,7 @@ namespace FRC_Utility_Software
             // 
             this.xDistanceNumeric.DecimalPlaces = 2;
             this.xDistanceNumeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.xDistanceNumeric.Location = new System.Drawing.Point(96, 146);
+            //this.xDistanceNumeric.Location = new System.Drawing.Point(96, 146);
             this.xDistanceNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -402,7 +406,7 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.xDistanceNumeric.Name = "xDistanceNumeric";
-            this.xDistanceNumeric.Size = new System.Drawing.Size(118, 27);
+            this.xDistanceNumeric.Size = new System.Drawing.Size(parmWidth, 27);
             this.xDistanceNumeric.TabIndex = 12;
             this.xDistanceNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.xDistanceNumeric.ThousandsSeparator = true;
@@ -412,7 +416,7 @@ namespace FRC_Utility_Software
             this.yDistanceLabel.AutoSize = true;
             this.yDistanceLabel.Font = new System.Drawing.Font("Impact", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.yDistanceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
-            this.yDistanceLabel.Location = new System.Drawing.Point(3, 176);
+            //this.yDistanceLabel.Location = new System.Drawing.Point(3, 176);
             this.yDistanceLabel.Name = "yDistanceLabel";
             this.yDistanceLabel.Size = new System.Drawing.Size(90, 22);
             this.yDistanceLabel.TabIndex = 15;
@@ -422,7 +426,7 @@ namespace FRC_Utility_Software
             // 
             this.yDistanceNumeric.DecimalPlaces = 2;
             this.yDistanceNumeric.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            this.yDistanceNumeric.Location = new System.Drawing.Point(96, 176);
+            //this.yDistanceNumeric.Location = new System.Drawing.Point(96, 176);
             this.yDistanceNumeric.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -434,60 +438,91 @@ namespace FRC_Utility_Software
             0,
             -2147483648});
             this.yDistanceNumeric.Name = "yDistanceNumeric";
-            this.yDistanceNumeric.Size = new System.Drawing.Size(118, 27);
+            this.yDistanceNumeric.Size = new System.Drawing.Size(parmWidth, 27);
             this.yDistanceNumeric.TabIndex = 14;
             this.yDistanceNumeric.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.yDistanceNumeric.ThousandsSeparator = true;
 
+            this.flowPane1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowPane1.Location = new System.Drawing.Point(0, 0);
+            this.flowPane1.Name = "flowLayoutPanel1";
+            this.flowPane1.Size = new System.Drawing.Size(508, 400);
+            this.flowPane1.TabIndex = 0;
+            this.flowPane1.WrapContents = false;
 
-            // 
-            // splitContainer
-            // 
-            this.splitContainer.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.splitContainer.Location = new System.Drawing.Point(595, 83);
-            this.splitContainer.Name = "splitContainer";
+            this.flowPane2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowPane2.Location = new System.Drawing.Point(0, 0);
+            this.flowPane2.Name = "flowLayoutPanel1";
+            this.flowPane2.Size = new System.Drawing.Size(508, 400);
+            this.flowPane2.TabIndex = 0;
+            this.flowPane2.WrapContents = false;
+
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(595, 83);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 433);
+            this.tableLayoutPanel1.TabIndex = 40;
+
             // 
             // splitContainer.Panel1
             // 
-            this.splitContainer.Panel1.Controls.Add(this.stepNumberLabel);
-            this.splitContainer.Panel1.Controls.Add(this.yDistanceLabel);
-            this.splitContainer.Panel1.Controls.Add(this.actionLabel);
-            this.splitContainer.Panel1.Controls.Add(this.yDistanceNumeric);
-            this.splitContainer.Panel1.Controls.Add(this.actionComboBox);
-            this.splitContainer.Panel1.Controls.Add(this.xDistanceLabel);
-            this.splitContainer.Panel1.Controls.Add(this.xDistanceNumeric);
-            this.splitContainer.Panel1.Controls.Add(this.speedLabel);
-            this.splitContainer.Panel1.Controls.Add(this.speedNumeric);
-            this.splitContainer.Panel1.Controls.Add(this.parrellelCheckBox);
-            this.splitContainer.Panel1.Controls.Add(this.timeout);
-            this.splitContainer.Panel1.Controls.Add(this.timeoutNumeric);
+            this.tableLayoutPanel1.Controls.Add(this.stepNumberLabel, 0, 0);
+
+            this.tableLayoutPanel1.Controls.Add(this.actionLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.actionComboBox, 1, 1);
+            
+            this.tableLayoutPanel1.Controls.Add(this.yDistanceLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.yDistanceNumeric, 1, 2);
+            
+            this.tableLayoutPanel1.Controls.Add(this.xDistanceLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.xDistanceNumeric, 1, 3);
+
+            this.tableLayoutPanel1.Controls.Add(this.speedLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.speedNumeric, 1, 4);
+
+            this.tableLayoutPanel1.Controls.Add(this.parrellelCheckBox, 0, 5);
+
+            this.tableLayoutPanel1.Controls.Add(this.timeout, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.timeoutNumeric, 1, 6);
+
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.parm1Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm1Numeric);
+            this.tableLayoutPanel1.Controls.Add(this.parm1Label, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.parm1Numeric, 3, 0);
 
-            this.splitContainer.Panel2.Controls.Add(this.parm2Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm2Numeric);
+            this.tableLayoutPanel1.Controls.Add(this.parm2Label, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.parm2Numeric, 3, 1);
 
-            this.splitContainer.Panel2.Controls.Add(this.parm3Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm3Numeric);
+            this.tableLayoutPanel1.Controls.Add(this.parm3Label, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.parm3Numeric, 3, 2);
 
-            this.splitContainer.Panel2.Controls.Add(this.parm4Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm4Numeric);
+            this.tableLayoutPanel1.Controls.Add(this.parm4Label, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.parm4Numeric, 3, 3);
 
-            this.splitContainer.Panel2.Controls.Add(this.parm5Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm5Numeric);
+            this.tableLayoutPanel1.Controls.Add(this.parm5Label, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.parm5Numeric, 3, 4);
 
-            this.splitContainer.Panel2.Controls.Add(this.parm6Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm6Numeric);
+            this.tableLayoutPanel1.Controls.Add(this.parm6Label, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.parm6Numeric, 3, 5);
 
-            this.splitContainer.Panel2.Controls.Add(this.parm7Label);
-            this.splitContainer.Panel2.Controls.Add(this.parm7Numeric);
-
-            this.splitContainer.Size = new System.Drawing.Size(433, 245);
-            this.splitContainer.SplitterDistance = 238;
-            this.splitContainer.TabIndex = 2;
+            this.tableLayoutPanel1.Controls.Add(this.parm7Label, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.parm7Numeric, 3, 6);
 
             this.stepNumberLabel.Text = "Step: " + position;
         }
@@ -548,7 +583,7 @@ namespace FRC_Utility_Software
 
         public void addToControl(ControlCollection control)
         {
-            control.Add(this.splitContainer);
+            control.Add(this.tableLayoutPanel1);
         }
 
 
@@ -563,14 +598,14 @@ namespace FRC_Utility_Software
             return position;
         }
 
-        public SplitContainer GetContainer()
+        public TableLayoutPanel GetContainer()
         {
-            return this.splitContainer;
+            return this.tableLayoutPanel1;
         }
 
         public void removeFromControl(ControlCollection control)
         {
-            control.Remove(this.splitContainer);
+            control.Remove(this.tableLayoutPanel1);
         }
 
         //override

@@ -90,6 +90,8 @@ namespace FRC_Utility_Software
         {
             flowLayoutPanel1.Controls.Clear();
 
+            stepList.reNumber();
+
             foreach(StepContainer stepContainer in stepList.getList())
             {
                 stepContainer.addToControl(flowLayoutPanel1.Controls);

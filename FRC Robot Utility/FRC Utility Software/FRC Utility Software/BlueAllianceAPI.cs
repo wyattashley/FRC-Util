@@ -11,6 +11,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -142,6 +143,56 @@ namespace FRC_Utility_Software
 
             (new GraphicalDisplay(new Series[]{points})).Show();
         }
+
+        private void LoadTeam_Click(object sender, EventArgs e)
+        {
+            string teamKey = "frc" + TeamNumberNumeric.Value.ToString();
+            string year = "2022";
+
+            List<EventLite> events = JsonConvert.DeserializeObject<List<EventLite>>(makeRequest("/team/" + teamKey + "/events/" + year + "/simple"));
+
+            List<Match> teamMatches = JsonConvert.DeserializeObject<List<Match>>(makeRequest("/team/" + teamKey + "/event/" + events[1].key + "/matches"));
+            List<Match> eventMatches = JsonConvert.DeserializeObject<List<Match>>(makeRequest("/event/" + events[1].key + "/matches"));
+
+            int teamMatchAverage = 0;
+            int eventMatchAverage = 0;
+            double eventMatchStandardDeviation = 0;
+
+            foreach (Match match in teamMatches)
+            {
+                if(match.alliances.blue.team_keys.Contains(teamKey))
+                {
+                    teamMatchAverage += int.Parse(match.score_breakdown.blue.endgameRobot2);
+                } else
+                {
+                    teamMatchAverage += int.Parse(match.score_breakdown.red.endgameRobot2);
+                }
+            }
+
+            foreach (Match match in eventMatches)
+            {
+                eventMatchAverage += int.Parse(match.score_breakdown.blue.endgameRobot2);
+                eventMatchAverage += int.Parse(match.score_breakdown.red.endgameRobot2);
+            }
+
+            teamMatchAverage /= teamMatches.Count();
+            eventMatchAverage /= eventMatches.Count();
+
+            foreach (Match match in eventMatches)
+            {
+                eventMatchStandardDeviation += Math.Pow((double) int.Parse(match.score_breakdown.blue.endgameRobot2) - eventMatchAverage, 2.0);
+                eventMatchStandardDeviation += Math.Pow((double) int.Parse(match.score_breakdown.red.endgameRobot2) - eventMatchAverage, 2.0);
+            }
+
+            eventMatchStandardDeviation /= eventMatches.Count() - 1;
+            eventMatchStandardDeviation = Math.Sqrt(eventMatchStandardDeviation);
+
+            double zClimbScore = (teamMatchAverage - eventMatchAverage) / (eventMatchStandardDeviation / Math.Sqrt(eventMatches.Count()));
+
+            outputDialog.Text += "Event Key: " + events[1].key + "\n";
+            outputDialog.Text += "Event Name: " + events[1].name + "\n";
+            outputDialog.Text += "Z Score: " + zClimbScore;
+        }
     }
 
     public class EventLite
@@ -150,8 +201,8 @@ namespace FRC_Utility_Software
         //public string country { get; set; }
         //public Dictionary<string, string> district { get; set; }
         //public string end_date { get; set; }
-        //public string event_code { get; set; }
-        //public int event_type { get; set; }
+        public string event_code { get; set; }
+        public int event_type { get; set; }
         public string key { get; set; }
         public string name { get; set; }
         //public string start_date { get; set; }

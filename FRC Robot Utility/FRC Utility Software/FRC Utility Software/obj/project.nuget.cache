@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rax/FS4cG699K2QEKJiSPlRjc81lSLghvQwDT02AgpUsqUKvrWTaJ6uo4WYkCzGjHcoOwQ4oabUewVY7ItkuCA==",
+  "dgSpecHash": "L6P14ZOuF8O4HuNJDBEZhcvqkbDkqmvgoGyT3ptcrCgaLHsrStXHgXS2IhVR2SZIgWAYYYCvHSNQU4ND9JOugg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Wyatt\\source\\repos\\FRC-Util\\FRC Robot Utility\\FRC Utility Software\\FRC Utility Software\\FRC Utility Software.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,11 @@
     "C:\\Users\\Wyatt\\.nuget\\packages\\system.drawing.common\\4.6.1\\system.drawing.common.4.6.1.nupkg.sha512",
     "C:\\Users\\Wyatt\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Wyatt\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\Wyatt\\.nuget\\packages\\system.windows.forms.datavisualization\\1.0.0-prerelease.20110.1\\system.windows.forms.datavisualization.1.0.0-prerelease.20110.1.nupkg.sha512"
+    "C:\\Users\\Wyatt\\.nuget\\packages\\system.windows.forms.datavisualization\\1.0.0-prerelease.20110.1\\system.windows.forms.datavisualization.1.0.0-prerelease.20110.1.nupkg.sha512",
+    "C:\\Users\\Wyatt\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\Wyatt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Wyatt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Wyatt\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

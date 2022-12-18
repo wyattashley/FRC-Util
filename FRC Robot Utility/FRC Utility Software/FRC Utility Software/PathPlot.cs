@@ -51,7 +51,7 @@ namespace FRC_Utility_Software
             // mainChart
             // 
             this.mainChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
-            chartArea1.BackImage = "C:\\Users\\Wyatt\\Pictures\\2022 FRC Feild.png";
+            chartArea1.BackImage = "C:\\Users\\Wyatt\\Downloads\\2022 FRC Feild.png";
             chartArea1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
             chartArea1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
             chartArea1.CursorX.AutoScroll = false;
@@ -64,11 +64,11 @@ namespace FRC_Utility_Software
             this.mainChart.Location = new System.Drawing.Point(125, 8);
             this.mainChart.Name = "mainChart";
             this.mainChart.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainChart.Size = new System.Drawing.Size(1000, 540);
+            this.mainChart.Size = new System.Drawing.Size(2000, 1080);
             this.mainChart.TabIndex = 4;
             this.mainChart.Text = "mainChart";
             this.mainChart.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.onDoubleClick);
-            this.mainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseDrag);
+            //this.mainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseDrag);
             this.mainChart.Click += new System.EventHandler(this.addPoint);
             this.mainChart.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainChart_MouseMove);
             this.Controls.Add(this.mainChart);
@@ -176,8 +176,6 @@ namespace FRC_Utility_Software
 
             stepList = new StepList(previousStepList);
 
-
-
             stepContainerReadMethods.Add("setposition", (a) =>
             {
                 waypoints.Points.AddXY((double)a.xDistanceNumeric.Value, (double)a.yDistanceNumeric.Value);
@@ -189,6 +187,12 @@ namespace FRC_Utility_Software
             {
                 waypoints.Points.AddXY((double)a.xDistanceNumeric.Value, (double)a.yDistanceNumeric.Value);
                 splinePointAngles.Add(Rotation2d.fromDegrees((double) a.parm1Numeric.Value));
+                //a.addOnDistanceChange(onCommandChanged);
+                return false;
+            });
+            stepContainerReadMethods.Add("default", (a) =>
+            {
+                commandPoints.Points.AddXY((double)a.xDistanceNumeric.Value, (double)a.yDistanceNumeric.Value);
                 //a.addOnDistanceChange(onCommandChanged);
                 return false;
             });
@@ -213,6 +217,7 @@ namespace FRC_Utility_Software
             }
         }
 
+        /* Drag removable of point
         private void mouseDrag(object sender, MouseEventArgs e)
         {
             if(removeCheck.Checked)
@@ -260,6 +265,7 @@ namespace FRC_Utility_Software
                 }
             }
         }
+        */
 
         public void updateUserStepList(object sender, EventArgs e)
         {
@@ -313,8 +319,8 @@ namespace FRC_Utility_Software
                     {
                         //Point2d point = splinePoints[index];
                         StepContainer point = stepList.get(index);
-                        if ((x < (double) point.xDistanceNumeric.Value + boxWidth && x > (double) point.xDistanceNumeric.Value - boxWidth) &&
-                            (y < (double) point.yDistanceNumeric.Value + boxWidth && y > (double) point.yDistanceNumeric.Value - boxWidth))
+                        if ((x < (double)point.xDistanceNumeric.Value + boxWidth && x > (double)point.xDistanceNumeric.Value - boxWidth) &&
+                            (y < (double)point.yDistanceNumeric.Value + boxWidth && y > (double)point.yDistanceNumeric.Value - boxWidth))
                         {
                             selectedPoint = index;
                             selectedPointSeries.Points.AddXY(x, y);
@@ -322,7 +328,7 @@ namespace FRC_Utility_Software
 
                             lowerXNumeric.Value = point.xDistanceNumeric.Value;
                             lowerYNumeric.Value = point.yDistanceNumeric.Value;
-                            angleTrackBar.Value = (int) point.parm1Numeric.Value;
+                            angleTrackBar.Value = (int)point.parm1Numeric.Value;
 
                             pointSelected = true;
                             pointSelectedMutable = false;
@@ -349,18 +355,21 @@ namespace FRC_Utility_Software
                 }
                 else if (addCommandRatio.Checked)
                 {
-                    step.addValues("cmd", 0, 0, x, y, false, new double[0]);
+                    step.addValues(commandType.Text, 0, 0, x, y, false, new double[0]);
 
                     step.addOnDistanceChange(onCommandChanged);
                     stepList.addStep(step);
-                    onCommandChanged(sender, e);
+                    step.addToControl(commandGroup.Controls);
+                    //onCommandChanged(sender, e);
+                    commandPoints.Points.AddXY(x, y);
                 }
                 else if (addPointRatio.Checked)
                 {
                     try
                     {
                         regularPoints[colorPicker.SelectedIndex].Points.AddXY(x, y);
-                    } catch (Exception exception)
+                    }
+                    catch (Exception exception)
                     {
 
                     }
@@ -369,6 +378,49 @@ namespace FRC_Utility_Software
 
                 //commandGroup.Controls.Clear();
                 //step.addToControl(commandGroup.Controls, steps.Count);
+            }
+            else
+            {
+                if (addWaypointRatio.Checked || addCommandRatio.Checked)
+                {
+                    for (int i = 0; i < stepList.getLength(); i++) //waypoints.Points.Count;)
+                    {
+                        generatedWaypoints.Points.Clear();
+                        //double tmpX = waypoints.Points[i].XValue;
+                        double tmpX = (double)stepList.get(i).xDistanceNumeric.Value;
+                        double tmpY = (double)stepList.get(i).yDistanceNumeric.Value;
+                        //double tmpY = waypoints.Points[i].YValues[0];
+                        if (x - 1 <= tmpX && x + 1 >= tmpX && y - 1 <= tmpY && y + 1 >= tmpY)// && stepList.get(i).actionComboBox.Text.ToLower().Equals("drive"))
+                        {
+                            //stepList.removeStepNumberInWaypoints(i);
+                            stepList.removeStep(i);
+                            //splinePointAngles.RemoveAt(i);
+                            updateUserStepList(sender, e);
+                            onCommandChanged(sender, e);
+                            break;
+                        }
+                    }
+                }
+                else if (addPointRatio.Checked)
+                {
+                    generatedWaypoints.Points.Clear();
+                    for (int a = 0; a < regularPoints.Count; a++)
+                    {
+                        for (int i = 0; i < regularPoints[a].Points.Count;)
+                        {
+                            double tmpX = regularPoints[a].Points[i].XValue;
+                            double tmpY = regularPoints[a].Points[i].YValues[0];
+                            if (x - 1 <= tmpX && x + 1 >= tmpX && y - 1 <= tmpY && y + 1 >= tmpY)
+                            {
+                                regularPoints[a].Points.RemoveAt(i);
+                            }
+                            else
+                            {
+                                i++;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -531,6 +583,15 @@ namespace FRC_Utility_Software
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void removeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            selectedPoint = -1;
+            pointSelected = false;
+
+            selectedPointSeries.Points.Clear();
+            generatedWaypoints.Points.Clear();
         }
     }
 }
