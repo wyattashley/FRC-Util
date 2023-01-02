@@ -163,7 +163,9 @@ namespace FRC_Utility_Software
 
         private void OpenNetActionButton_Click(object sender, EventArgs e)
         {
-            new OpenNetPrompt().Show();
+            new OpenNetPrompt((text) => {
+                openFile(text);
+            }).Show();
         }
 
         public void openFile(string path) {
@@ -421,6 +423,12 @@ namespace FRC_Utility_Software
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            //(new BrowseNetworkTable()).Show();
+            (new HardwareConfigurationMenu()).Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             (new BrowseNetworkTable()).Show();
         }

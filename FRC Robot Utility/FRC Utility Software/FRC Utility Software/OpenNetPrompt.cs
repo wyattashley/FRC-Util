@@ -11,8 +11,10 @@ namespace FRC_Utility_Software
 {
     public partial class OpenNetPrompt : Form
     {
-        public OpenNetPrompt()
+        Action<string> onResult;
+        public OpenNetPrompt(Action<string> _onResult)
         {
+            onResult = _onResult;
             InitializeComponent();
         }
         private void OpenNetButton_Click(object sender, EventArgs e)
@@ -29,12 +31,6 @@ namespace FRC_Utility_Software
             PasswordEntity.Enabled = false;
             int portNumber = (int) PortNumberEntry.Value;
             PortNumberEntry.Enabled = false;
-            string logName = LogNameEntry.Text;
-            LogNameEntry.Enabled = false;
-            Boolean mostRecentLog = MostRecentLog.Checked;
-            MostRecentLog.Enabled = false;
-            string logType = LogTypeEntry.SelectedIndex.ToString();
-            LogTypeEntry.Enabled = false;
 
             SftpConnection sftp;
 
@@ -43,15 +39,15 @@ namespace FRC_Utility_Software
             
             if (!teamNumber.Equals(0))
             {
-                sftp = new SftpConnection("roborio-" + teamNumber + "-frc.local", "lvuser", "", StatusDisplay);
+                sftp = new SftpConnection("roborio-" + teamNumber + "-frc.local", "lvuser", "", statusLabel);
             } else
             {
-                sftp = new SftpConnection(address, username, password, StatusDisplay);
+                sftp = new SftpConnection(address, username, password, statusLabel);
             }
 
             if (UnkownLocation.Checked)
             {
-                (new OpenNetBrowsing(sftp)).Show();
+                (new OpenNetBrowsing(sftp, onResult)).Show();
             }
 
             /*

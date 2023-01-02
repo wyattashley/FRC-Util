@@ -13,7 +13,13 @@
     <Compile Update="Main Project.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MultiInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NetworkTableUtil\BrowseNetworkTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NetworkTableUtil\HardwareConfigurationMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="OpenNetBrowsing.cs">

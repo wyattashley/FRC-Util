@@ -59,6 +59,7 @@
             this.Controls.Add(this.button1);
             this.Name = "BrowseNetworkTable";
             this.Text = "BrowseNetworkTable";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BrowseNetworkTable_FormClosing);
             this.ResumeLayout(false);
 
         }

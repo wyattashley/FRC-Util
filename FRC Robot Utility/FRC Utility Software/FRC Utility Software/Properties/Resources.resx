@@ -118,7 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BAG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BAG_6_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CanCoder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CanCoder_10_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CIM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CIM_7_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DriveTrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DriveTrain_11_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EncoderGeneric" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EncoderGeneric_3_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Falcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Falcon_13_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FIELD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2022-FRC-Feild.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Generic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Generic_1_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GyroGeneric" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GyroGeneric_2_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MotorGeneric" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MotorGeneric_4_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Neo_8_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Neo550" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Neo-550_9_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pigeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pigeon_12_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SwerveModule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SwerveModule_14_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WINDOW_5_11zon-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

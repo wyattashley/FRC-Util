@@ -75,6 +75,7 @@ namespace FRC_Utility_Software
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HourEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinuteEntry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SecondEntry)).BeginInit();
@@ -410,7 +411,7 @@ namespace FRC_Utility_Software
             this.button1.Location = new System.Drawing.Point(158, 349);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 20);
+            this.button1.Size = new System.Drawing.Size(84, 27);
             this.button1.TabIndex = 32;
             this.button1.Text = "Graph";
             this.button1.UseVisualStyleBackColor = false;
@@ -611,9 +612,24 @@ namespace FRC_Utility_Software
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(198, 28);
             this.button3.TabIndex = 109;
-            this.button3.Text = "Blue Alliance";
+            this.button3.Text = "Hardware Configuration";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(205)))), ((int)(((byte)(5)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
+            this.button4.Location = new System.Drawing.Point(97, 599);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(198, 28);
+            this.button4.TabIndex = 110;
+            this.button4.Text = "Network Tables";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainProject
             // 
@@ -621,6 +637,7 @@ namespace FRC_Utility_Software
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1186, 662);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -726,6 +743,7 @@ namespace FRC_Utility_Software
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
